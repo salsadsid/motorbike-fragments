@@ -1,6 +1,23 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
+import Loading from './Loading';
 
 const Navbar = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+    };
+    if (loading) {
+        return <Loading></Loading>
+    }
+    const menuItem = <>
+        <li><Link to='/'>Home</Link></li>
+        {user && <li><Link to='/dashboard'>Dashboard</Link></li>}
+        <li>{user ? <button className="btn btn-ghost" onClick={logout}>Sign Out</button> : <Link to='/login'>Login</Link>}</li>
+    </>
     return (
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -23,22 +40,11 @@ const Navbar = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost normal-case text-xl">MotorBike Fragments</a>
+                <Link to='/' class="btn btn-ghost normal-case text-xl">MotorBike Fragments</Link>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
-                    <li><a>Item 1</a></li>
-                    <li tabindex="0">
-                        <a>
-                            Parent
-                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                        </a>
-                        <ul class="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    {menuItem}
                 </ul>
             </div>
             <div class="navbar-end">
