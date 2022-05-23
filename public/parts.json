@@ -1,0 +1,56 @@
+[
+  {
+    "_id": 1,
+    "name": "48 V DC Electric Bike Display, Plastic",
+    "img": "https://i.ibb.co/PZ9CgM3/48-V-DC-Electric-Bike-Display-Plastic.jpg",
+    "description": "We are supply the speed and battery display for electric vehicles in different voltage 36V, 48V, 60V, 72V",
+    "minimumOrder": 5,
+    "availableQuantity": 25,
+    "price": 10000
+  },
+  {
+    "_id": 2,
+    "name": "MY1020Z 600 Watt (DC Geared Motor)",
+    "img": "https://i.ibb.co/MMPP7my/MY1020-Z-600-Watt-DC-Geared-Motor-For-E-Bike.jpg",
+    "description": "36 volt 600 watt MY1020Z gear reduction electric motor with mounting bracket and a 10 tooth #40 chain sprocket",
+    "minimumOrder": 5,
+    "availableQuantity": 20,
+    "price": 15000
+  },
+  {
+    "_id": 3,
+    "name": "Yalu 24V 350W E Bike Controller",
+    "img": "https://i.ibb.co/XZzK1nx/Yalu-24-V-350-W-Aluminium-E-Bike-Controller.jpg",
+    "description": "Compatible Motor: Hub Motor .Body Material AluminiumRated .Voltage: 24 V .Rated Power: 350 W",
+    "minimumOrder": 10,
+    "availableQuantity": 59,
+    "price": 4000
+  },
+  {
+    "_id": 4,
+    "name": "Front Fork For Electric Vehicles",
+    "img": "https://i.ibb.co/tHr8qF8/Front-Fork-Suspension-Assembly-For-Tvs-Jupiter-Disc-Brake.jpg",
+    "description": "We deal in Electric Bike Parts/ E Bike Parts, Electric Scooter Parts / E Scooter Parts, E Rickshaw Spare Parts, E Loader Spare Parts,",
+    "minimumOrder": 10,
+    "availableQuantity": 75,
+    "price": 3500
+  },
+  {
+    "_id": 5,
+    "name": "Two Wheeler Motorcycle Chain",
+    "img": "https://i.ibb.co/c1G0FXm/Two-Wheeler-Mild-Steel-Motorcycle-Chain.jpg",
+    "description": "Vehicle Type: Two Wheeler.Packaging Type: Box. Brand: Pace Technologies. Two Wheeler Parts - Bike Spare Parts.",
+    "minimumOrder": 20,
+    "availableQuantity": 120,
+    "price": 500
+  },
+  {
+    "_id": 6,
+    "name": "Automotive Wire Harness",
+    "img": "https://i.ibb.co/Pj6FzbQ/Automotive-Wire-Harness.jpg",
+    "description": "Keeping the diverse requirements of customers in mind, we are instrumental in providing Automotive Wire Harness.",
+    "minimumOrder": 20,
+    "availableQuantity": 125,
+    "price": 100
+  }
+]

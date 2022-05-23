@@ -1,0 +1,50 @@
+[
+    {
+        "id": "624abe65b392ffd06ce41bb5",
+        "img": "./images/man-1.png",
+        "name": "Boyer Monroe",
+        "email": "boyermonroe@buzzopia.com",
+        "review": "A timeless beauty. The watch is a wonderful sight on my wife's wrist. I bought it as a birthday/ vacation gift and it was a very wise thing to do.",
+        "rating": 3
+    },
+    {
+        "id": "624abe6521f88af1d4a97969",
+        "img": "./images/woman-1.png",
+        "name": "Ortega Nunez",
+        "email": "orteganunez@buzzopia.com",
+        "review": "I ordered 2 different watches, one for sport and one for dress. I love them both and the prices were very good. Shipping was fast. Thanks.",
+        "rating": 4
+    },
+    {
+        "id": "624abe6590115ddeee6161f6",
+        "img": "./images/man-2.png",
+        "name": "Earlene Malone",
+        "email": "earlenemalone@buzzopia.com",
+        "review": "Love the watch, fast delivery. Very happy! Will buy again.",
+        "rating": 3.5
+    },
+    {
+        "id": "624abe65de2820eeee84ab96",
+        "img": "./images/woman-2.png",
+        "name": "Rena Chen",
+        "email": "renachen@buzzopia.com",
+        "review": "The selection was amazing and I noted it so that when I'm looking for something out of the ordinary I can find it at a great price. I ordered a basic Timex with a rose/gold face and light gray strap. It … ",
+        "rating": 3
+    },
+    {
+        "id": "624abe6569a0c3d5fad8ae6b",
+        "img": "./images/man-3.png",
+        "name": "Ruby Blair",
+        "email": "rubyblair@buzzopia.com",
+        "review": "The watch that I got from Nubeo is magnificent. The delivery process was a little tricky, make sure you have a residential address rather than a PObox. It was delayed by a couple of days, but this watch was worth the wait…… ",
+        "rating": 4
+    },
+    {
+        "id": "624abe65231f73e8866e37f9",
+        "img": "./images/woman-3.png",
+        "name": "Esperanza Branch",
+        "email": "esperanzabranch@buzzopia.com",
+        "review": "Very responsive to purchases. Watches are easy to order, and delivery was quick and secure.",
+        "rating": 5
+    }
+]
