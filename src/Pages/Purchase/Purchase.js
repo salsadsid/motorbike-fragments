@@ -16,13 +16,7 @@ const Purchase = () => {
     )
     refetch()
 
-    const { register, formState: { errors }, handleSubmit } = useForm(
-        {
-            defaultValues: {
-                number: 5,
-            }
-        }
-    );
+    const { register, formState: { errors }, handleSubmit } = useForm();
     if (isLoading) {
         return <Loading></Loading>
     }

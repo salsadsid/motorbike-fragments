@@ -6,7 +6,7 @@ const Review = ({ review }) => {
             <div class="card-body">
                 <h2 class="card-title">{review.email}</h2>
                 <p>{review.review}</p>
-                <p><span className='font-bold'>Ratings: </span>{review.rating}</p>
+                <p><span className='font-bold'>Ratings: </span>{review.rating} /5</p>
                 <div class="card-actions justify-end">
                     <button class="btn">Buy Now</button>
                 </div>
