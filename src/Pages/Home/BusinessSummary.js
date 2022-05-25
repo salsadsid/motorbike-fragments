@@ -2,12 +2,12 @@ import React from 'react';
 
 const BusinessSummary = () => {
     return (
-        <div style={{ backgroundImage: "url(" + "https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" + ")" }}>
-            <h2 className='text-4xl text-primary text-center'>Millions Business Trust Us</h2>
+        <div className='bg-primary mb-16'>
+            <h2 className='text-center text-4xl text-secondary font-bold pt-6'>Million Business Trust Us</h2>
             <div class="shadow w-full grid sm:grid-cols-1 lg:grid-cols-3 gap-2 my-5">
 
-                <div className='flex flex-col justify-center items-center py-3 bg-primary'>
-                    <div class="stat-figure text-4xl text-white">
+                <div className='flex flex-col justify-center items-center py-3 bg-secondary m-3 rounded-lg text-white'>
+                    <div class="stat-figure text-4xl ">
                         <i class="fas fa-industry"></i>
                     </div>
                     <div class="stat-title">Market Size</div>
@@ -15,7 +15,7 @@ const BusinessSummary = () => {
                     <div class="stat-desc">2010-2020</div>
                 </div>
 
-                <div className='flex flex-col justify-center items-center py-3 bg-primary'>
+                <div className='flex flex-col justify-center items-center py-3 bg-secondary m-3 rounded-lg text-white'>
                     <div class="stat-figure text-white text-4xl">
                         <i class="fas fa-hand-holding-water"></i>
                     </div>
@@ -24,7 +24,7 @@ const BusinessSummary = () => {
                     <div class="stat-desc">2015-2020</div>
                 </div>
 
-                <div className='flex flex-col justify-center items-center py-3 bg-primary'>
+                <div className='flex flex-col justify-center items-center py-3 bg-secondary m-3 rounded-lg text-white'>
                     <div class="stat-figure text-white text-4xl">
                         <i class="fas fa-fire"></i>
                     </div>
@@ -34,6 +34,7 @@ const BusinessSummary = () => {
                 </div>
 
             </div>
+            <h2 className='text-center text-3xl text-secondary font-bold pb-8'>For Details Give Us a Hello <button class="btn btn-lg btn-accent">Contact Us</button></h2>
         </div>
     );
 };

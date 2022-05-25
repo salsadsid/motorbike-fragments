@@ -7,9 +7,9 @@ module.exports = {
     themes: [
       {
         thebikermantheme: {
-          primary: "#0FCFEC",
-          secondary: "#19D3AE",
-          accent: "#3A4256",
+          primary: "#ADEFD1FF",
+          secondary: "#00203FFF",
+          accent: "#FCA311",
           neutral: "#3d4451",
           "base-100": "#ffffff",
         },

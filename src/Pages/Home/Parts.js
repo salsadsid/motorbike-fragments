@@ -9,8 +9,8 @@ const Parts = () => {
             .then(data => setParts(data))
     }, [])
     return (
-        <div>
-            <h2 className='text-center text-3xl text-primary font-bold'>MotorBike Spare Parts</h2>
+        <div className='my-16'>
+            <h2 className='text-center text-4xl text-secondary font-bold'>Motorbike Spare Parts</h2>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
                     parts.map(part => <Part

@@ -13,6 +13,11 @@ import Dashboard from './Pages/Dashboard.js/Dashboard';
 import MyOrder from './Pages/Dashboard.js/MyOrder';
 import AddReview from './Pages/Dashboard.js/AddReview';
 import MyProfile from './Pages/Dashboard.js/MyProfile';
+import RequireAdmin from './Pages/Login/RequireAdmin';
+import ManageOrder from './Pages/Dashboard.js/ManageOrder';
+import AddProduct from './Pages/Dashboard.js/AddProduct';
+import ManageProduct from './Pages/Dashboard.js/ManageProduct';
+import MakeAdmin from './Pages/Dashboard.js/MakeAdmin';
 
 function App() {
   return (
@@ -33,6 +38,10 @@ function App() {
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='dashboard/order' element={<MyOrder></MyOrder>}></Route>
           <Route path='dashboard/review' element={<AddReview></AddReview>}></Route>
+          <Route path='dashboard/manageorder' element={<RequireAdmin><ManageOrder></ManageOrder></RequireAdmin>}></Route>
+          <Route path='dashboard/addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+          <Route path='dashboard/manageproduct' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
+          <Route path='dashboard/makeadmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
         </Route>
       </Routes>
       <ToastContainer></ToastContainer>

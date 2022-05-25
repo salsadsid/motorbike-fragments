@@ -43,84 +43,90 @@ const Purchase = () => {
         refetch();
     }
     return (
-        <div className=''>
-            <div class="card lg:card-side bg-base-100 shadow-xl w-96 mx-auto">
-                <figure><img src="https://api.lorem.space/image/album?w=400&h=400" alt="Album" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title">{part.name}</h2>
-                    <p>Click the button to listen on Spotiwhy app.</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Listen</button>
+        <div class="hero min-h-screen bg-base-200">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="text-center lg:text-left">
+                    <div class="avatar">
+                        <div class="w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                            <img src={part.img} alt={part.name} />
+                        </div>
+                    </div>
+
+                    <h2><span className='font-bold text-3xl'>Product Name: </span><br></br><span className='text-xl font-bold text-accent'>{part.name}</span></h2>
+                    <p><span className='font-bold'>Price: </span>{part.price}</p>
+                    <p><span className='font-bold'>Minimum Order Quantity: </span>{part.minimumOrder}</p>
+                    <p><span className='font-bold'>Available: </span>{part.availableQuantity}</p>
+
+                </div>
+
+                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div class="card-body items-center text-center">
+                        <h2 class="text-2xl font-bold">User Information</h2>
+                        <p><span className='font-bold text-xl'>Email: </span>{user?.email}</p>
+                        <p><span className='font-bold text-xl'>Name: </span>{user?.displayName}</p>
+
+
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Phone</span>
+                                </label>
+                                <input ref={register} {...register("phone", {
+                                    required: {
+                                        value: true,
+                                        message: 'Phone number is required'
+                                    }
+                                })} type="text" placeholder="Phone Number" className="input input-bordered" />
+                                <label className="label">
+                                    {errors.phone?.type === 'required' && <span className="label-text-alt text-red-600">{errors.phone.message}</span>}
+
+                                </label>
+                            </div>
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Address</span>
+                                </label>
+                                <input {...register("address", {
+                                    required: {
+                                        value: true,
+                                        message: 'Address is required'
+                                    }
+                                })} type="text" placeholder="Address" className="input input-bordered w-full max-w-xs" />
+                                <label className="label">
+                                    {errors.address?.type === 'required' && <span className="label-text-alt text-red-600">{errors.address.message}</span>}
+
+                                </label>
+                            </div>
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Order Quantity</span>
+                                </label>
+                                <input {...register("number", {
+                                    required: {
+                                        value: true,
+                                        message: 'Order Quantity is required'
+                                    },
+                                    min: {
+                                        value: part.minimumOrder,
+                                        message: 'Greater value required'
+                                    },
+                                    max: {
+                                        value: part.availableQuantity,
+                                        message: 'Less value required'
+                                    }
+                                })} type="number" placeholder="Order Quantity" className="input input-bordered w-full max-w-xs" />
+                                <label className="label">
+                                    {errors.number?.type === 'required' && <span className="label-text-alt text-red-600">{errors.number.message}</span>}
+                                    {errors.number?.type === 'min' && <span className="label-text-alt text-red-600">{errors.number.message}</span>}
+                                    {errors.number?.type === 'max' && <span className="label-text-alt text-red-600">{errors.number.message}</span>}
+                                </label>
+                            </div>
+                            <input type="submit" className='btn btn-secondary w-full max-w-xs' value='Place Order' />
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="card w-96 shadow-xl mx-auto bg-primary">
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">User Info</h2>
-                    <p><span>Email: </span>{user?.email}</p>
-                    <p><span>Name: </span>{user?.displayName}</p>
-
-
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Phone</span>
-                            </label>
-                            <input ref={register} {...register("phone", {
-                                required: {
-                                    value: true,
-                                    message: 'Phone number is required'
-                                }
-                            })} type="text" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
-                            <label className="label">
-                                {errors.phone?.type === 'required' && <span className="label-text-alt text-red-600">{errors.phone.message}</span>}
-
-                            </label>
-                        </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Address</span>
-                            </label>
-                            <input {...register("address", {
-                                required: {
-                                    value: true,
-                                    message: 'Address is required'
-                                }
-                            })} type="text" placeholder="Address" className="input input-bordered w-full max-w-xs" />
-                            <label className="label">
-                                {errors.address?.type === 'required' && <span className="label-text-alt text-red-600">{errors.address.message}</span>}
-
-                            </label>
-                        </div>
-                        <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">NUmber</span>
-                            </label>
-                            <input {...register("number", {
-                                required: {
-                                    value: true,
-                                    message: 'Quantity is required'
-                                },
-                                min: {
-                                    value: part.minimumOrder,
-                                    message: 'greater required'
-                                },
-                                max: {
-                                    value: part.availableQuantity,
-                                    message: 'less required'
-                                }
-                            })} type="number" placeholder="number" className="input input-bordered w-full max-w-xs" />
-                            <label className="label">
-                                {errors.number?.type === 'required' && <span className="label-text-alt text-red-600">{errors.number.message}</span>}
-                                {errors.number?.type === 'min' && <span className="label-text-alt text-red-600">{errors.number.message}</span>}
-                                {errors.number?.type === 'max' && <span className="label-text-alt text-red-600">{errors.number.message}</span>}
-                            </label>
-                        </div>
-                        <input type="submit" className='btn  w-full max-w-xs' value='Login' />
-                    </form>
-                </div>
-            </div>
-        </div>
+        </div >
     );
 };
 

@@ -2,14 +2,11 @@ import React from 'react';
 
 const Review = ({ review }) => {
     return (
-        <div class="card lg:max-w-lg bg-primary hover:bg-secondary transition duration-500 ease-out hover:ease-in text-primary-content ">
+        <div class="card lg:max-w-lg bg-base-200 hover:bg-primary transition duration-500 ease-out hover:ease-in hover:cursor-pointer">
             <div class="card-body">
-                <h2 class="card-title">{review.email}</h2>
+                <h2 class="card-title text-secondary ">{review.email}</h2>
                 <p>{review.review}</p>
-                <p><span className='font-bold'>Ratings: </span>{review.rating} /5</p>
-                <div class="card-actions justify-end">
-                    <button class="btn">Buy Now</button>
-                </div>
+                <p className='text-secondary '><span className='font-bold'>Ratings: </span>{review.rating} /5</p>
             </div>
         </div>
     );
