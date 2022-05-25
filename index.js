@@ -51,6 +51,11 @@ async function run() {
             const part = await cursor.toArray();
             res.send(part)
         })
+        app.post('/part', verifyJWT, verifyAdmin, async (req, res) => {
+            const part = req.body
+            const result = await partCollection.insertOne(part);
+            res.send(result);
+        })
         app.get('/review', async (req, res) => {
             const query = {};
             const cursor = reviewCollection.find(query);
@@ -123,7 +128,10 @@ async function run() {
             const result = await bookingCollection.deleteOne(filter);
             res.send(result);
         })
-
+        app.get('/user', verifyJWT, verifyAdmin, async (req, res) => {
+            const users = await userCollection.find().toArray()
+            res.send(users)
+        })
         app.put('/user/admin/:email', verifyJWT, verifyAdmin, async (req, res) => {
             const email = req.params.email;
             const filter = { email: email }
