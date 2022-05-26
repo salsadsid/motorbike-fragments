@@ -54,11 +54,14 @@ async function run() {
             }
 
         }
+        //Payment Api
         app.get('/payment', verifyJWT, async (req, res) => {
             const query = {}
             const result = await paymentCollection.find(query).toArray()
             res.send(result);
         })
+
+        //Parts Api
         app.get('/part', async (req, res) => {
             const query = {};
             const cursor = partCollection.find(query);
@@ -77,6 +80,9 @@ async function run() {
             const result = await partCollection.deleteOne(filter);
             res.send(result);
         })
+
+        //Review Api
+
         app.get('/review', async (req, res) => {
             const query = {};
             const cursor = reviewCollection.find(query);
@@ -88,7 +94,7 @@ async function run() {
             const result = await reviewCollection.insertOne(review);
             res.send({ success: true, result });
         })
-
+        //Purchase Api
         app.get('/purchase/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) }
@@ -105,6 +111,8 @@ async function run() {
             const result = await bookingCollection.insertOne(booking);
             res.send({ success: true, result });
         })
+
+        //Booking Api
         app.patch('/booking/:id', verifyJWT, async (req, res) => {
             const id = req.params.id;
             const payment = req.body;
@@ -120,6 +128,8 @@ async function run() {
             const updatedBooking = await bookingCollection.updateOne(filter, updateDoc);
             res.send(updatedBooking)
         })
+
+        //Payment Status Api
         app.patch('/status/:id', verifyJWT, async (req, res) => {
             const id = req.params.id;
             const payment = req.body;
@@ -141,6 +151,8 @@ async function run() {
             });
             res.send({ clientSecret: paymentIntent.client_secret })
         })
+
+        //User put api
         app.put('/user/:email', async (req, res) => {
             const email = req.params.email;
             const user = req.body;
