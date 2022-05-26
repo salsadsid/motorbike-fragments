@@ -45,7 +45,7 @@ async function run() {
             }
 
         }
-        app.get('/part', async (req, res) => {
+        app.get('/part', verifyJWT, async (req, res) => {
             const query = {};
             const cursor = partCollection.find(query);
             const part = await cursor.toArray();
@@ -54,6 +54,13 @@ async function run() {
         app.post('/part', verifyJWT, verifyAdmin, async (req, res) => {
             const part = req.body
             const result = await partCollection.insertOne(part);
+            res.send(result);
+        })
+        app.delete('/part/:id', verifyJWT, async (req, res) => {
+            const id = req.params.id;
+            console.log(id)
+            const filter = { _id: ObjectId(id) }
+            const result = await partCollection.deleteOne(filter);
             res.send(result);
         })
         app.get('/review', async (req, res) => {
