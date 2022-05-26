@@ -36,7 +36,7 @@ const SignUp = () => {
         <div className='flex h-screen justify-center items-center '>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
-                    <h2 className="text-center text-2xl font-bold">Sign Up</h2>
+                    <h2 className="text-center text-secondary text-2xl font-bold">Sign Up</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
@@ -93,13 +93,13 @@ const SignUp = () => {
                             </label>
                         </div>
                         {signInError}
-                        <input type="submit" className='btn  w-full max-w-xs' value='Sign Up' />
+                        <input type="submit" className='btn btn-accent w-full max-w-xs' value='Sign Up' />
                     </form>
-                    <p><small>Already in Doctors Portal ? <Link to='/login' className='text-primary'>Please login</Link></small></p>
+                    <p><small>Already in Motorbike Fragments ? <Link to='/login' className='text-secondary'>Please login</Link></small></p>
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-outline">Continue with Google</button>
+                        className="btn btn-secondary btn-outline">Continue with Google</button>
                 </div>
             </div>
         </div>

@@ -47,7 +47,7 @@ const AddReview = () => {
                         }
                     })} type="text" placeholder="Review" className="input input-bordered input-lg w-full max-w-xs" />
                     <label className="label">
-                        {errors.review?.type === 'required' && <span className="label-text-alt text-red-600">{errors.address.message}</span>}
+                        {errors.review?.type === 'required' && <span className="label-text-alt text-red-600">{errors.review.message}</span>}
 
                     </label>
                 </div>
