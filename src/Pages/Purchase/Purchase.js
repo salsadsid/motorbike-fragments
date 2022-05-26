@@ -67,14 +67,14 @@ const Purchase = () => {
                         </div>
                     </div>
 
-                    <h2><span className='font-bold text-3xl'>Product Name: </span><br></br><span className='text-xl font-bold text-accent'>{part.name}</span></h2>
+                    <h2><span className='font-bold text-xl'>Product Name: </span><br></br><span className='text-xl font-bold text-accent'>{part.name}</span></h2>
                     <p><span className='font-bold'>Price: </span>{part.price}</p>
                     <p><span className='font-bold'>Minimum Order Quantity: </span>{part.minimumOrder}</p>
                     <p><span className='font-bold'>Available: </span>{part.availableQuantity}</p>
                     <label className="label">
                         <span className="label-text">Quantity</span>
                     </label>
-                    <input defaultValue={part.minimumOrder} className='input' onChange={handleChange} />
+                    <input defaultValue={part.minimumOrder} className='input max-w-xs' onChange={handleChange} />
 
 
                 </div>
