@@ -9,11 +9,7 @@ const ManageProduct = () => {
 
     const [deleteProduct, setDeleteProduct] = useState(null)
     const navigate = useNavigate()
-    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:5000/part`, {
-        headers: {
-            authorization: `Bearer ${localStorage.getItem('accessToken')}`
-        }
-    }).then(res => res.json())
+    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:5000/part`).then(res => res.json())
     )
     if (isLoading) {
         return <Loading></Loading>

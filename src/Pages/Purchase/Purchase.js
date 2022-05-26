@@ -23,6 +23,7 @@ const Purchase = () => {
     const onSubmit = data => {
         data.email = user?.email;
         data.productName = part.name;
+        data.price = part.price;
         fetch('http://localhost:5000/booking', {
             method: 'POST',
             headers: {

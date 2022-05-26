@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
+import Loading from '../Shared/Loading';
 import Part from './Part';
 
 const Parts = () => {
-    const [parts, setParts] = useState([])
-    useEffect(() => {
-        fetch('http://localhost:5000/part')
-            .then(res => res.json())
-            .then(data => setParts(data))
-    }, [])
+
+    const { data: parts, isLoading } = useQuery('parts', () => fetch(`http://localhost:5000/part`).then(res => res.json())
+    )
+    if (isLoading) {
+        return <Loading></Loading>
+    }
     return (
         <div className='my-16'>
             <h2 className='text-center text-4xl text-secondary font-bold'>Motorbike Spare Parts</h2>
