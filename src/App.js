@@ -19,6 +19,9 @@ import AddProduct from './Pages/Dashboard.js/AddProduct';
 import ManageProduct from './Pages/Dashboard.js/ManageProduct';
 import MakeAdmin from './Pages/Dashboard.js/MakeAdmin';
 import Payment from './Pages/Dashboard.js/Payment';
+import NotFound from './Pages/Shared/NotFound';
+import Blogs from './Pages/Blogs/Blogs';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 
 function App() {
   return (
@@ -27,6 +30,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/purchase/:id' element={<RequireAuth>
           <Purchase></Purchase>
@@ -45,6 +50,7 @@ function App() {
           <Route path='manageproduct' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
           <Route path='makeadmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
         </Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer></ToastContainer>
     </div>
