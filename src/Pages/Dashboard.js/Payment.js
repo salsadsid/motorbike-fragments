@@ -5,11 +5,13 @@ import Loading from '../Shared/Loading';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from './CheckoutForm';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const stripePromise = loadStripe('pk_test_51L3PO7CXM0Suko1ErN7z40ESh8tbaBQiqOKziKKB1ZaDZARQGQ1GEBKInmuxYdCSZDwaNT0hIEgCWg8EpfORRs2x00x6ocY1Bf');
 const Payment = () => {
     const { id } = useParams()
-
+    const [user] = useAuthState(auth)
     const { data: order, isLoading } = useQuery(['booking', id], () => fetch(`http://localhost:5000/booking/${id}`, {
         method: 'GET',
         headers: {
@@ -25,8 +27,8 @@ const Payment = () => {
         <div>
             <div class="card w-96 bg-base-100 shadow-xl my-8">
                 <div class="card-body">
-                    <h2 class="card-title">Hello {order.name}</h2>
-                    <p>Please pay for : {order.email}</p>
+                    <h2 class="card-title">Hello,<span className='text-secondary'>{user?.displayName}</span> </h2>
+                    <p>Please pay for : {order.productName}</p>
                     <p>Please Pay: {order.price}</p>
                 </div>
             </div>

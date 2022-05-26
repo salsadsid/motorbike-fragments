@@ -1,35 +1,48 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useQuery } from 'react-query';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
 
-const AllOrderRow = ({ order, index, number, setDeleteOrder }) => {
-    const { data: orders, isLoading, refetch } = useQuery('payment', () => fetch(`http://localhost:5000/payment`, {
-        headers: {
-            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+const AllOrderRow = ({ order, index, number, setDeleteOrder, refetch }) => {
+
+
+    const handleStatus = (tnxId) => {
+        const payment = {
+            status: true
         }
-    }).then(res => {
-        if (res.status === 401 || res.status === 403) {
-            signOut(auth);
-            localStorage.removeItem('accessToken');
-            navigate('/');
-            console.log(res.status)
-        }
-        return res.json()
-    }))
+        fetch(`http://localhost:5000/status/${tnxId}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            },
+            body: JSON.stringify(payment)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    refetch()
+                    toast.success('Your Product Is being shipped')
+                }
+            })
+    }
     return (
         <tr>
             <th>{index + 1}</th>
             <td>{order.productName}</td>
             <td>{order.email}</td>
 
-            <td>{!order.paid && <span>UNPAID</span>}
-                {order.paid && <span>
+            <td>{!order.paid && <span className='bg-accent font-bold text-white px-1'>UNPAID</span>}
+                {order.paid && <span className='bg-green-600 font-bold text-white px-1'>
                     PAID</span>}
             </td>
-            <td>{!order.status && <span>Pending</span>}
-                {order.status && <span>
-                    Shipped</span>}
+            <td>{!order.status && <span className='bg-accent font-bold text-white px-1'>PENDING</span>}
+                {order.status && <span className='bg-green-600 font-bold text-white px-1'>
+                    SHIPPED</span>}
             </td>
-            <td>{order.tnxId ? <button>Approve Order</button> : <>Please Pay</>}</td>
+            <td>{order.tnxId ? <button onClick={() => handleStatus(order.tnxId)} className='btn btn-xs btn-secondary'>Approve Order</button> : <span className='bg-accent font-bold text-white px-1'>PLEASE PAY</span>}</td>
             <td><label onClick={() => setDeleteOrder(order)} for="delete-order-modal" class="btn modal-button btn-xs btn-error">DELETE</label>
             </td>
         </tr >

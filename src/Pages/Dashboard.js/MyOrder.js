@@ -33,14 +33,13 @@ const MyOrder = () => {
 
     return (
         <div>
-            <h2>My Orders{orders.length}</h2>
+            <h2 className='text-2xl'>My Orders</h2>
             <div class="overflow-x-auto">
                 <table class="table table-zebra w-full">
                     <thead>
                         <tr>
                             <th></th>
                             <th>Product Name</th>
-                            <th>User</th>
                             <th>Quantity</th>
                             <th>Payment Status</th>
                             <th>Action</th>

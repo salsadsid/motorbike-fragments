@@ -75,7 +75,7 @@ const AddReview = () => {
                         {errors.rating?.type === 'max' && <span className="label-text-alt text-red-600">{errors.rating.message}</span>}
                     </label>
                 </div>
-                <input type="submit" className='btn  w-full max-w-xs' value='Add Review' />
+                <input type="submit" className='btn btn-accent  w-full max-w-xs' value='Add Review' />
             </form>
         </div>
     );

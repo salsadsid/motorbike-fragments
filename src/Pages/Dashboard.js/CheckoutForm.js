@@ -72,7 +72,8 @@ const CheckoutForm = ({ order }) => {
             setSuccess('Congratulation')
             const payment = {
                 orderId: _id,
-                tnxId: paymentIntent.id
+                tnxId: paymentIntent.id,
+                status: false
             }
             fetch(`http://localhost:5000/booking/${_id}`, {
                 method: 'PATCH',
@@ -109,15 +110,15 @@ const CheckoutForm = ({ order }) => {
                         },
                     }}
                 />
-                <button type="submit" className='btn btn-success btn-sm my-4' disabled={!stripe || !clientSecret}>
+                <button type="submit" className='btn btn-accent btn-sm my-4' disabled={!stripe || !clientSecret}>
                     Pay
                 </button>
             </form>
             {
-                cardError && <p>{cardError}</p>
+                cardError && <p className='bg-primary text-white px-1'>{cardError}</p>
             }
             {
-                success && <p>{success} {tnxId}</p>
+                success && <p className='bg-secondary text-white px-1'>{success}<span> {tnxId}</span> </p>
             }
         </>
     );

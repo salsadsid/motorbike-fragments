@@ -6,11 +6,10 @@ const OrderRow = ({ order, index, number, setDeleteOrder }) => {
         <tr>
             <th>{index + 1}</th>
             <td>{order.productName}</td>
-            <td>{order.email}</td>
             <td>{order.number}</td>
-            <td>{(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn'>pay</button></Link>}
-                {(order.price && order.paid) && <span>
-                    paid || TnxID: {order.tnxId}</span>}
+            <td>{(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs'>pay</button></Link>}
+                {(order.price && order.paid) && <span className='bg-green-600 text-white px-1 font-bold'>
+                    PAID <span className='bg-accent text-white px-1 font-bold'>TnxID: {order.tnxId}</span></span>}
             </td>
             <td><label onClick={() => setDeleteOrder(order)} for="delete-order-modal" class="btn modal-button btn-xs btn-error">DELETE</label>
             </td>
