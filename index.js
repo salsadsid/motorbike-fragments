@@ -75,7 +75,6 @@ async function run() {
         })
         app.delete('/part/:id', verifyJWT, async (req, res) => {
             const id = req.params.id;
-            console.log(id)
             const filter = { _id: ObjectId(id) }
             const result = await partCollection.deleteOne(filter);
             res.send(result);
@@ -168,7 +167,6 @@ async function run() {
         app.put('/userdetail/:name', async (req, res) => {
             const name = req.params.name;
             const user = req.body;
-            console.log(user)
             const filter = { displayName: name };
             const options = { upsert: true };
             const updateDoc = {
@@ -185,7 +183,6 @@ async function run() {
         })
         app.get('/booking', verifyJWT, async (req, res) => {
             const user = req.query?.user
-            console.log(user)
             const decodedEmail = req.decoded.email
             if (user === decodedEmail) {
                 const query = { email: user }
@@ -200,7 +197,6 @@ async function run() {
         })
         app.delete('/booking/:id', verifyJWT, async (req, res) => {
             const id = req.params.id;
-            console.log(id)
             const filter = { _id: ObjectId(id) }
             const result = await bookingCollection.deleteOne(filter);
             res.send(result);
