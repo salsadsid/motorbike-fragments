@@ -6,7 +6,7 @@ const ProductRow = ({ product, setDeleteProduct, index }) => {
         <tr>
             <th>{index + 1}</th>
             <td>{product?.name}</td>
-            <td><label onClick={() => setDeleteProduct(product)} for="delete-product-modal" class="btn modal-button btn-xs btn-error">DELETE</label>
+            <td><label onClick={() => setDeleteProduct(product)} for="delete-product-modal" className="btn modal-button btn-xs btn-error">DELETE</label>
             </td>
         </tr>
     );

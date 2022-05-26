@@ -58,11 +58,11 @@ const Purchase = () => {
     }
 
     return (
-        <div class="hero min-h-screen bg-base-200">
-            <div class="hero-content flex-col lg:flex-row-reverse">
-                <div class="text-center lg:text-left">
-                    <div class="avatar">
-                        <div class="w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <div className="hero min-h-screen bg-base-200">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+                <div className="text-center lg:text-left">
+                    <div className="avatar">
+                        <div className="w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                             <img src={part.img} alt={part.name} />
                         </div>
                     </div>
@@ -79,9 +79,9 @@ const Purchase = () => {
 
                 </div>
 
-                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <div class="card-body items-center text-center">
-                        <h2 class="text-2xl font-bold">User Information</h2>
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card-body items-center text-center">
+                        <h2 className="text-2xl font-bold">User Information</h2>
                         <p><span className='font-bold text-xl'>Email: </span>{user?.email}</p>
                         <p><span className='font-bold text-xl'>Name: </span>{user?.displayName}</p>
 

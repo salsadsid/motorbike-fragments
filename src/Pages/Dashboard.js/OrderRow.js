@@ -11,7 +11,7 @@ const OrderRow = ({ order, index, number, setDeleteOrder }) => {
                 {(order.price && order.paid) && <span className='bg-green-600 text-white px-1 font-bold'>
                     PAID <span className='bg-accent text-white px-1 font-bold'>TnxID: {order.tnxId}</span></span>}
             </td>
-            <td><label onClick={() => setDeleteOrder(order)} for="delete-order-modal" class="btn modal-button btn-xs btn-error">DELETE</label>
+            <td><label onClick={() => setDeleteOrder(order)} for="delete-order-modal" className="btn modal-button btn-xs btn-error">DELETE</label>
             </td>
         </tr>
     );

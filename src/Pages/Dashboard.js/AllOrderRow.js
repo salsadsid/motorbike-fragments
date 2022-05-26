@@ -43,7 +43,7 @@ const AllOrderRow = ({ order, index, number, setDeleteOrder, refetch }) => {
                     SHIPPED</span>}
             </td>
             <td>{order.tnxId ? <button onClick={() => handleStatus(order.tnxId)} className='btn btn-xs btn-secondary'>Approve Order</button> : <span className='bg-accent font-bold text-white px-1'>PLEASE PAY</span>}</td>
-            <td><label onClick={() => setDeleteOrder(order)} for="delete-order-modal" class="btn modal-button btn-xs btn-error">DELETE</label>
+            <td><label onClick={() => setDeleteOrder(order)} for="delete-order-modal" className="btn modal-button btn-xs btn-error">DELETE</label>
             </td>
         </tr >
     );
