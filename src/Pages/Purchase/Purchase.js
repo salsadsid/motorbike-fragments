@@ -9,13 +9,12 @@ import { toast } from 'react-toastify';
 const Purchase = () => {
     const { id } = useParams()
     const [user] = useAuthState(auth)
-
+    const [value, setValue] = useState(0)
+    const [toggleSubmit, setToggleSubmit] = useState(false)
     const { data: part, isLoading, refetch } = useQuery(['part'], () =>
         fetch(`http://localhost:5000/purchase/${id}`)
             .then(res => res.json())
     )
-    refetch()
-
     const { register, formState: { errors }, handleSubmit } = useForm();
     if (isLoading) {
         return <Loading></Loading>
@@ -24,6 +23,7 @@ const Purchase = () => {
         data.email = user?.email;
         data.productName = part.name;
         data.price = part.price;
+        data.quantity = value;
         fetch('http://localhost:5000/booking', {
             method: 'POST',
             headers: {
@@ -43,6 +43,20 @@ const Purchase = () => {
             })
         refetch();
     }
+    const handleChange = event => {
+        event.preventDefault()
+
+        const value = parseInt(event.target.value)
+        if (value >= part.minimumOrder && value <= part.availableQuantity) {
+            setToggleSubmit(false)
+            setValue(value)
+        }
+        else {
+            setToggleSubmit(true)
+        }
+
+    }
+
     return (
         <div class="hero min-h-screen bg-base-200">
             <div class="hero-content flex-col lg:flex-row-reverse">
@@ -57,6 +71,11 @@ const Purchase = () => {
                     <p><span className='font-bold'>Price: </span>{part.price}</p>
                     <p><span className='font-bold'>Minimum Order Quantity: </span>{part.minimumOrder}</p>
                     <p><span className='font-bold'>Available: </span>{part.availableQuantity}</p>
+                    <label className="label">
+                        <span className="label-text">Quantity</span>
+                    </label>
+                    <input defaultValue={part.minimumOrder} className='input' onChange={handleChange} />
+
 
                 </div>
 
@@ -98,35 +117,12 @@ const Purchase = () => {
 
                                 </label>
                             </div>
-                            <div className="form-control w-full max-w-xs">
-                                <label className="label">
-                                    <span className="label-text">Order Quantity</span>
-                                </label>
-                                <input {...register("number", {
-                                    required: {
-                                        value: true,
-                                        message: 'Order Quantity is required'
-                                    },
-                                    min: {
-                                        value: part.minimumOrder,
-                                        message: 'Greater value required'
-                                    },
-                                    max: {
-                                        value: part.availableQuantity,
-                                        message: 'Less value required'
-                                    }
-                                })} type="number" placeholder="Order Quantity" className="input input-bordered w-full max-w-xs" />
-                                <label className="label">
-                                    {errors.number?.type === 'required' && <span className="label-text-alt text-red-600">{errors.number.message}</span>}
-                                    {errors.number?.type === 'min' && <span className="label-text-alt text-red-600">{errors.number.message}</span>}
-                                    {errors.number?.type === 'max' && <span className="label-text-alt text-red-600">{errors.number.message}</span>}
-                                </label>
-                            </div>
-                            <input type="submit" className='btn btn-secondary w-full max-w-xs' value='Place Order' />
+                            <input type="submit" className='btn btn-secondary w-full max-w-xs' value='Place Order' disabled={toggleSubmit} />
                         </form>
                     </div>
                 </div>
             </div>
+
         </div >
     );
 };
