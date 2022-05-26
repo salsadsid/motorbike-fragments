@@ -10,6 +10,8 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+// Verify JWT Token
+
 function verifyJWT(req, res, next) {
     const authHeader = req.headers.authorization;
     if (!authHeader) {
@@ -31,11 +33,16 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run() {
     try {
         await client.connect()
+
+        // Database Collections
+
         const partCollection = client.db('motorbike-fragments').collection("parts")
         const bookingCollection = client.db('motorbike-fragments').collection("bookings")
         const userCollection = client.db('motorbike-fragments').collection("users")
         const reviewCollection = client.db('motorbike-fragments').collection("reviews")
         const paymentCollection = client.db('motorbike-fragments').collection("payments")
+
+        //Verify Admin
         const verifyAdmin = async (req, res, next) => {
             const requester = req.decoded.email;
             const requesterAccount = await userCollection.findOne({ email: requester })
