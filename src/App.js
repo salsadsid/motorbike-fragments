@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Pages/Shared/Navbar';
 import Home from './Pages/Home/Home';
