@@ -14,7 +14,7 @@ const CheckoutForm = ({ order }) => {
     const { _id, price, productName, email } = order;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/create-payment-intent`, {
+        fetch(`https://mysterious-mountain-85694.herokuapp.com/create-payment-intent`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -75,7 +75,7 @@ const CheckoutForm = ({ order }) => {
                 tnxId: paymentIntent.id,
                 status: false
             }
-            fetch(`http://localhost:5000/booking/${_id}`, {
+            fetch(`https://mysterious-mountain-85694.herokuapp.com/booking/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

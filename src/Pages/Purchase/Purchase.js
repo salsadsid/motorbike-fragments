@@ -12,7 +12,7 @@ const Purchase = () => {
     const [value, setValue] = useState(0)
     const [toggleSubmit, setToggleSubmit] = useState(false)
     const { data: part, isLoading, refetch } = useQuery(['part'], () =>
-        fetch(`http://localhost:5000/purchase/${id}`)
+        fetch(`https://mysterious-mountain-85694.herokuapp.com/purchase/${id}`)
             .then(res => res.json())
     )
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -24,7 +24,7 @@ const Purchase = () => {
         data.productName = part.name;
         data.price = part.price;
         data.quantity = value;
-        fetch('http://localhost:5000/booking', {
+        fetch('https://mysterious-mountain-85694.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

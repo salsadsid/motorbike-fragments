@@ -10,7 +10,7 @@ import DeleteOrderModal from './DeleteOrderModal';
 const ManageOrder = () => {
     const [deleteOrder, setDeleteOrder] = useState(null)
     const navigate = useNavigate()
-    const { data: orders, isLoading, refetch } = useQuery('allorders', () => fetch(`http://localhost:5000/booking`, {
+    const { data: orders, isLoading, refetch } = useQuery('allorders', () => fetch(`https://mysterious-mountain-85694.herokuapp.com/booking`, {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

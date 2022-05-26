@@ -23,7 +23,7 @@ const AddProduct = () => {
                 if (result.success) {
                     const img = result.data.url;
                     data.img = img;
-                    fetch('http://localhost:5000/part', {
+                    fetch('https://mysterious-mountain-85694.herokuapp.com/part', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

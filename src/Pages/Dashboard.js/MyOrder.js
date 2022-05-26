@@ -12,7 +12,7 @@ const MyOrder = () => {
     const [user] = useAuthState(auth);
     const [deleteOrder, setDeleteOrder] = useState(null)
     const navigate = useNavigate()
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:5000/booking?user=${user.email}`, {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://mysterious-mountain-85694.herokuapp.com/booking?user=${user.email}`, {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

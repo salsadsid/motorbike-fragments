@@ -13,7 +13,7 @@ const AddReview = () => {
     }
     const onSubmit = data => {
         data.email = user?.email
-        fetch('http://localhost:5000/review', {
+        fetch('https://mysterious-mountain-85694.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

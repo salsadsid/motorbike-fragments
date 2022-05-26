@@ -12,7 +12,7 @@ const AllOrderRow = ({ order, index, number, setDeleteOrder, refetch }) => {
         const payment = {
             status: true
         }
-        fetch(`http://localhost:5000/status/${tnxId}`, {
+        fetch(`https://mysterious-mountain-85694.herokuapp.com/status/${tnxId}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

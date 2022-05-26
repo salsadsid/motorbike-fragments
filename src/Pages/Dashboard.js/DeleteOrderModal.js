@@ -5,7 +5,7 @@ const DeleteOrderModal = ({ deleteOrder, setDeleteOrder, refetch }) => {
     const { productName, email, _id } = deleteOrder
     console.log(_id);
     const handleDelete = () => {
-        fetch(`http://localhost:5000/booking/${_id}`, {
+        fetch(`https://mysterious-mountain-85694.herokuapp.com/booking/${_id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -28,7 +28,7 @@ const DeleteOrderModal = ({ deleteOrder, setDeleteOrder, refetch }) => {
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
                     <h3 className="font-bold text-lg">{deleteOrder.productName}</h3>
-                    <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                    <p className="py-4">Are You Sure?</p>
                     <div className="modal-action">
                         <button onClick={() => handleDelete(email)} className='btn btn-xs bg-red-500'>REMOVE</button>
                         <label htmlFor="delete-order-modal" className="btn btn-xs">cancel</label>

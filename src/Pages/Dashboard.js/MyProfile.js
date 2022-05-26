@@ -12,7 +12,7 @@ const MyProfile = () => {
     }
     const onSubmit = data => {
         data.displayName = user?.displayName;
-        fetch(`http://localhost:5000/userdetail/${user?.displayName}`, {
+        fetch(`https://mysterious-mountain-85694.herokuapp.com/userdetail/${user?.displayName}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -100,7 +100,7 @@ const MyProfile = () => {
                         </label>
                     </div>
 
-                    <input type="submit" className='btn  w-full max-w-xs' value='Login' />
+                    <input type="submit" className='btn btn-accent w-full max-w-xs' value='Update' />
                 </form>
             </div>
         </div >
