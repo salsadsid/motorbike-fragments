@@ -31,7 +31,7 @@ const MyProfile = () => {
             })
     }
     return (
-        <div className="card w-96 shadow-xl mx-auto bg-primary">
+        <div className="card w-80 shadow-xl mx-auto bg-primary">
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Update Profile</h2>
                 <p><span>Email: </span>{user?.email}</p>
