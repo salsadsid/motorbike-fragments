@@ -156,7 +156,7 @@ const AddProduct = () => {
 
                     </label>
                 </div>
-                <input type="submit" className='btn  w-full max-w-xs' value='ADD' />
+                <input type="submit" className='btn btn-accent w-full max-w-xs' value='ADD PRODUCT' />
             </form>
         </div>
     );
