@@ -7,16 +7,27 @@ const Part = ({ part }) => {
         navigate(`/purchase/${id}`)
     }
     return (
-        <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+        <div className="card lg:max-w-lg bg-base-100 hover:shadow-xl shadow transition-shadow border border-accent relative overflow-visible">
+            <div className='bg-accent absolute right-0 top-[-10px] rounded-2xl font-semibold py-1 px-4'>Available</div>
             <figure className="px-10 pt-10">
                 <img src={part.img} alt="Shoes" className="rounded-xl h-48" />
+
             </figure>
-            <div className="card-body items-center text-center">
-                <h2 className="card-title">{part.name}</h2>
-                <p>{part.description}</p>
-                <p><span className='font-bold'>Price: </span>{part.price} <span className='font-bold'>BDT</span></p>
-                <p><span className='font-bold'>Minimum Order: </span>{part.minimumOrder}</p>
-                <p><span className='font-bold'>Available Quantity: </span>{part.availableQuantity}</p>
+
+            <div className="card-body font-semibold">
+
+                <h2 className="text-lg first-letter:font-extrabold border-b-2 font-semibold">{part.name.length < 32 ? part.name : part.name.slice(0, 27) + ".."}</h2>
+                <p><span className='font-bold text-md'>Short Description:</span> {part.description.length < 53 ? part.description : part.description.slice(0, 42) + "..."}</p>
+                <p>
+                    <span className='font-bold'>Price: </span><span className='inline-block rounded px-2 bg-warning-content text-white'>{part.price} <span className='font-bold'>BDT</span></span> /unit
+                </p>
+                <p><span className='font-bold'>Minimum Order: </span>
+                    {part.minimumOrder} units
+                </p>
+                <p><span className='font-bold text-md'>Available Quantity: </span>
+                    {part.availableQuantity} units
+                </p>
+
                 <div className="card-actions">
                     <button onClick={() => handlePurchase(part._id)} className="btn btn-primary">Purchase</button>
                 </div>
