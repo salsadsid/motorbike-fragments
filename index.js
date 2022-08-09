@@ -41,6 +41,7 @@ async function run() {
         const userCollection = client.db('motorbike-fragments').collection("users")
         const reviewCollection = client.db('motorbike-fragments').collection("reviews")
         const paymentCollection = client.db('motorbike-fragments').collection("payments")
+        const upcomingCollection = client.db('motorbike-fragments').collection("upcoming")
 
         //Verify Admin
         const verifyAdmin = async (req, res, next) => {
@@ -71,6 +72,13 @@ async function run() {
         app.post('/part', verifyJWT, verifyAdmin, async (req, res) => {
             const part = req.body
             const result = await partCollection.insertOne(part);
+            res.send(result);
+        })
+        app.post('/upcoming', async (req, res) => {
+            const part = req.body
+            console.log(part)
+            const result = await upcomingCollection.insertOne(part);
+            console.log(result)
             res.send(result);
         })
         app.delete('/part/:id', verifyJWT, async (req, res) => {
@@ -226,7 +234,6 @@ async function run() {
     }
 }
 run().catch(console.dir)
-
 app.get('/', (req, res) => {
     res.send('MotorBike Fragments Running');
 })
