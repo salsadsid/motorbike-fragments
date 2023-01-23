@@ -13,7 +13,7 @@ const AddReview = () => {
     }
     const onSubmit = data => {
         data.email = user?.email
-        fetch('https://mysterious-mountain-85694.herokuapp.com/review', {
+        fetch('https://motorbike-fragments-server-salsadsid.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

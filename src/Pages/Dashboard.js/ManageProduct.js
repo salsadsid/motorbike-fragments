@@ -9,7 +9,7 @@ const ManageProduct = () => {
 
     const [deleteProduct, setDeleteProduct] = useState(null)
     const navigate = useNavigate()
-    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch(`https://mysterious-mountain-85694.herokuapp.com/part`).then(res => res.json())
+    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/part`).then(res => res.json())
     )
     if (isLoading) {
         return <Loading></Loading>

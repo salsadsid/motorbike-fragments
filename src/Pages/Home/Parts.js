@@ -5,7 +5,7 @@ import Part from './Part';
 
 const Parts = () => {
 
-    const { data: parts, isLoading } = useQuery('parts', () => fetch(`https://mysterious-mountain-85694.herokuapp.com/part`).then(res => res.json())
+    const { data: parts, isLoading } = useQuery('parts', () => fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/part`).then(res => res.json())
     )
     if (isLoading) {
         return <Loading></Loading>

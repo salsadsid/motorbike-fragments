@@ -14,7 +14,7 @@ const CheckoutForm = ({ order }) => {
     const { _id, price, productName, email } = order;
 
     useEffect(() => {
-        fetch(`https://mysterious-mountain-85694.herokuapp.com/create-payment-intent`, {
+        fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/create-payment-intent`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -75,7 +75,7 @@ const CheckoutForm = ({ order }) => {
                 tnxId: paymentIntent.id,
                 status: false
             }
-            fetch(`https://mysterious-mountain-85694.herokuapp.com/booking/${_id}`, {
+            fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/booking/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

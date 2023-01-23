@@ -23,7 +23,7 @@ const AddUpcomingProduct = () => {
                     const img = result.data.url;
                     data.img = img;
                     console.log(data)
-                    fetch('http://localhost:5000/upcoming', {
+                    fetch('https://motorbike-fragments-server-salsadsid.vercel.app/upcoming', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

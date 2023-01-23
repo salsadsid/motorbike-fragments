@@ -12,7 +12,7 @@ const AllOrderRow = ({ order, index, number, setDeleteOrder, refetch }) => {
         const payment = {
             status: true
         }
-        fetch(`https://mysterious-mountain-85694.herokuapp.com/status/${tnxId}`, {
+        fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/status/${tnxId}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

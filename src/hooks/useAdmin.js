@@ -6,7 +6,7 @@ const useAdmin = user => {
     useEffect(() => {
         const email = user?.email;
         if (email) {
-            fetch(`https://mysterious-mountain-85694.herokuapp.com/admin/${email}`, {
+            fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/admin/${email}`, {
                 method: 'GET',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -23,7 +23,7 @@ const AddProduct = () => {
                 if (result.success) {
                     const img = result.data.url;
                     data.img = img;
-                    fetch('https://mysterious-mountain-85694.herokuapp.com/part', {
+                    fetch('https://motorbike-fragments-server-salsadsid.vercel.app/part', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 
 const UserRow = ({ user, refetch, index }) => {
     const makeAdmin = () => {
-        fetch(`https://mysterious-mountain-85694.herokuapp.com/user/admin/${user.email}`, {
+        fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/user/admin/${user.email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

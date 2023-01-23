@@ -18,6 +18,7 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
     let signInError;
+    console.log(user)
     const [token] = useToken(user || gUser)
     useEffect(() => {
         if (token) {

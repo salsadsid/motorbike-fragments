@@ -12,7 +12,7 @@ const MyProfile = () => {
     }
     const onSubmit = data => {
         data.displayName = user?.displayName;
-        fetch(`https://mysterious-mountain-85694.herokuapp.com/userdetail/${user?.displayName}`, {
+        fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/userdetail/${user?.displayName}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
