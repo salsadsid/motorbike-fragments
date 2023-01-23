@@ -6,7 +6,7 @@ const useAdmin = user => {
     useEffect(() => {
         const email = user?.email;
         if (email) {
-            fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/admin/${email}`, {
+            fetch(`https://motorbike-fragments.onrender.com/admin/${email}`, {
                 method: 'GET',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`

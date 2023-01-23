@@ -12,7 +12,7 @@ const Purchase = () => {
     const [value, setValue] = useState(0)
     const [toggleSubmit, setToggleSubmit] = useState(false)
     const { data: part, isLoading, refetch } = useQuery(['part'], () =>
-        fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/purchase/${id}`)
+        fetch(`https://motorbike-fragments.onrender.com/purchase/${id}`)
             .then(res => res.json())
     )
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -24,7 +24,7 @@ const Purchase = () => {
         data.productName = part.name;
         data.price = part.price;
         data.quantity = value;
-        fetch('https://motorbike-fragments-server-salsadsid.vercel.app/booking', {
+        fetch('https://motorbike-fragments.onrender.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

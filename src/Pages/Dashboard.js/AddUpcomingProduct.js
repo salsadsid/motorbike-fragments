@@ -23,7 +23,7 @@ const AddUpcomingProduct = () => {
                     const img = result.data.url;
                     data.img = img;
                     console.log(data)
-                    fetch('https://motorbike-fragments-server-salsadsid.vercel.app/upcoming', {
+                    fetch('https://motorbike-fragments.onrender.com/upcoming', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

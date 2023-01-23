@@ -5,7 +5,7 @@ import UserRow from './UserRow';
 
 const MakeAdmin = () => {
     const { data: users, isLoading, refetch } = useQuery('users', () =>
-        fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/user`, {
+        fetch(`https://motorbike-fragments.onrender.com/user`, {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

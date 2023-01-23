@@ -23,7 +23,7 @@ const AddProduct = () => {
                 if (result.success) {
                     const img = result.data.url;
                     data.img = img;
-                    fetch('https://motorbike-fragments-server-salsadsid.vercel.app/part', {
+                    fetch('https://motorbike-fragments.onrender.com/part', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

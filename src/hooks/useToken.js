@@ -9,7 +9,7 @@ const useToken = user => {
         const currentEmail = { email: email, displayName: displayName };
         console.log(email);
         if (email) {
-            fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/user/${email}`, {
+            fetch(`https://motorbike-fragments.onrender.com/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json',

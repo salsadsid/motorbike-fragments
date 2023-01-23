@@ -13,7 +13,7 @@ const AddReview = () => {
     }
     const onSubmit = data => {
         data.email = user?.email
-        fetch('https://motorbike-fragments-server-salsadsid.vercel.app/review', {
+        fetch('https://motorbike-fragments.onrender.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

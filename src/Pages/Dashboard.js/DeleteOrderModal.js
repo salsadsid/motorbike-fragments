@@ -5,7 +5,7 @@ const DeleteOrderModal = ({ deleteOrder, setDeleteOrder, refetch }) => {
     const { productName, email, _id } = deleteOrder
     console.log(_id);
     const handleDelete = () => {
-        fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/booking/${_id}`, {
+        fetch(`https://motorbike-fragments.onrender.com/booking/${_id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

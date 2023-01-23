@@ -12,7 +12,7 @@ const stripePromise = loadStripe('pk_test_51L3PO7CXM0Suko1ErN7z40ESh8tbaBQiqOKzi
 const Payment = () => {
     const { id } = useParams()
     const [user] = useAuthState(auth)
-    const { data: order, isLoading } = useQuery(['booking', id], () => fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/booking/${id}`, {
+    const { data: order, isLoading } = useQuery(['booking', id], () => fetch(`https://motorbike-fragments.onrender.com/booking/${id}`, {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`

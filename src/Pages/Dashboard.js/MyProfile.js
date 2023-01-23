@@ -12,7 +12,7 @@ const MyProfile = () => {
     }
     const onSubmit = data => {
         data.displayName = user?.displayName;
-        fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/userdetail/${user?.displayName}`, {
+        fetch(`https://motorbike-fragments.onrender.com/userdetail/${user?.displayName}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

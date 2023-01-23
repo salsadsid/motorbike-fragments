@@ -12,7 +12,7 @@ const AllOrderRow = ({ order, index, number, setDeleteOrder, refetch }) => {
         const payment = {
             status: true
         }
-        fetch(`https://motorbike-fragments-server-salsadsid.vercel.app/status/${tnxId}`, {
+        fetch(`https://motorbike-fragments.onrender.com/status/${tnxId}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
