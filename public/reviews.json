@@ -1,32 +1,44 @@
 [
     {
         "email": "boyermonroe@buzzopia.com",
-        "review": "A timeless beauty. The watch is a wonderful sight on my wife's wrist. I bought it as a birthday/ vacation gift and it was a very wise thing to do.",
+        "name":"Camellia",
+        "img":"https://thumbs2.imgbox.com/e6/ae/s5RGxAVU_t.png",
+        "review": "Ordered a fairing kit for my 2001Ducati 748, when it arrived it was a lighter yellow that what it looked like on the photos sent. No where exact to true Ducati yellow. ",
         "rating": 3
     },
     {
         "email": "orteganunez@buzzopia.com",
-        "review": "I ordered 2 different watches, one for sport and one for dress. I love them both and the prices were very good. Shipping was fast. Thanks.",
+        "name":"Vasqueze",
+        "img":"https://thumbs2.imgbox.com/1c/f6/cj3nFaiq_t.png",
+        "review": "You were unable to give me an expected receive date, Why? Very disappointed. Are we looking at 2 days or 6 weeks? My side by side is tore apart and not able to use, do I put the old, bad belt back in and put it together (lot of work), or wait... tell me it ships right away, I'll change my rating as well as look to purchase again, thanks",
         "rating": 4
     },
     {
         "email": "earlenemalone@buzzopia.com",
-        "review": "Love the watch, fast delivery. Very happy! Will buy again.",
+        "name":"Dr. Curry",
+        "img":"https://thumbs2.imgbox.com/74/f9/R1FQ0wc1_t.png",
+        "review": "The entire process was seamless and professional. Very efficient communication, any questions- Erick got right back to me. The process is long but everything was as described right from the beginning (just seems like forever when you're anxious).",
         "rating": 3.5
     },
     {
         "email": "renachen@buzzopia.com",
-        "review": "The selection was amazing and I noted it so that when I'm looking for something out of the ordinary I can find it at a great price. I ordered a basic Timex with a rose/gold face and light gray strap. It … ",
+        "name":"Isaac",
+        "img":"https://thumbs2.imgbox.com/0b/de/A2Jvshlf_t.png",
+        "review": "Highly recommend you guys, products are awesome with super fast delivery to the east coast, ordered Monday and received Thursday, very happy. Thanks guys, cheers John",
         "rating": 3
     },
     {
         "email": "rubyblair@buzzopia.com",
-        "review": "The watch that I got from Nubeo is magnificent. The delivery process was a little tricky, make sure you have a residential address rather than a PObox. It was delayed by a couple of days, but this watch was worth the wait…… ",
+        "name":"Adam",
+        "img":"https://thumbs2.imgbox.com/8b/f6/JgZlSNez_t.png",
+        "review": "Perfect fit and shipped quick! Needed to upgraded both front axels on my 2008 artic cat 650. Was referred by a friend to try these out",
         "rating": 4
     },
     {
         "email": "esperanzabranch@buzzopia.com",
-        "review": "Very responsive to purchases. Watches are easy to order, and delivery was quick and secure.",
+        "name":"Waldman",
+        "img":"https://thumbs2.imgbox.com/c0/a3/0CfSZs7J_t.png",
+        "review": "Janese provides such excellent customer service. Her communication is clear, concise and she replies very quickly. Parts are dispatched upon purchase the same if not very next day and they come package really really well, to reduce any form of damage from being miss handled by couriers.",
         "rating": 5
     }
 ]

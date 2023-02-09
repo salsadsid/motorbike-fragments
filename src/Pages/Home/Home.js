@@ -1,8 +1,8 @@
 import React from 'react';
 import Footer from '../Shared/Footer';
 import Banner from './Banner';
-import Banner2 from './Banner2';
-import Banner3 from './Banner3';
+import HaveAQuestion from './HaveAQuestion';
+import ExpertAdvice from './ExpertAdvice';
 import BusinessSummary from './BusinessSummary';
 import Parts from './Parts';
 import Reviews from './Reviews';
@@ -13,9 +13,9 @@ const Home = () => {
             <Banner></Banner>
             <Parts></Parts>
             <BusinessSummary></BusinessSummary>
-            <Banner3></Banner3>
+            <ExpertAdvice></ExpertAdvice>
             <Reviews></Reviews>
-            <Banner2></Banner2>
+            <HaveAQuestion></HaveAQuestion>
             <Footer></Footer>
         </div>
     );

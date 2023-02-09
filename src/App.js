@@ -21,10 +21,12 @@ import NotFound from './Pages/Shared/NotFound';
 import Blogs from './Pages/Blogs/Blogs';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import AddUpcomingProduct from './Pages/Dashboard.js/AddUpcomingProduct';
+import Announcement from './Pages/Home/Announcement';
 
 function App() {
   return (
     <div>
+      <Announcement></Announcement>
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
