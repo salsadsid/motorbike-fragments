@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Announcement = () => {
     const [close,setClose] =useState(false)
     return (
-        <div className={`relative bg-indigo-600 px-4 py-3 pr-14 text-white ${close ? 'hidden' : 'block'}`}>
+        <div className={`relative bg-blue-700 px-4 py-3 pr-14 text-white ${close ? 'hidden' : 'block'}`}>
   <p class="text-left text-sm font-medium sm:text-center">
     Love Motorbike Fragments? Check out new blogs!
 

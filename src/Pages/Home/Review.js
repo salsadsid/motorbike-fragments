@@ -10,7 +10,7 @@ const Review = ({ review }) => {
   <div class="flex items-center">
     <img
       alt="Developer"
-      src={img ? img : "https://images.unsplash.com/photo-1614644147724-2d4785d69962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"}
+      src={img ? img : "https://images.unsplash.com/photo-1594634932563-cb50acd10766?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"}
       class="h-16 w-16 rounded-full object-cover"
     />
 <span

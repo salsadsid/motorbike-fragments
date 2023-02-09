@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import img from '../../assets/image/banner2.jpg'
+import img from '../../assets/image/andriyko-podilnyk-Fy72qZAKuxM-unsplash (1).jpg'
 const Banner3 = () => {
     return (
         // <div className="hero min-h-screen bg-accent">
@@ -42,7 +42,7 @@ const Banner3 = () => {
 //   />
 // </section>
 <section
-  class="overflow-hidden bg-gray-50 dark:bg-gray-900 sm:grid sm:grid-cols-2 sm:items-center"
+  class="overflow-hidden bg-gray-100 dark:bg-gray-900 sm:grid sm:grid-cols-2 sm:items-center"
 >
   <div class="p-8 md:p-12 lg:px-16 lg:py-24">
     <div class="mx-auto max-w-xl text-center sm:text-left">
