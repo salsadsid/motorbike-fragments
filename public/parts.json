@@ -1,56 +1,153 @@
 [
   {
-    "_id": 1,
+    
     "name": "48 V DC Electric Bike Display, Plastic",
     "img": "https://i.ibb.co/PZ9CgM3/48-V-DC-Electric-Bike-Display-Plastic.jpg",
     "description": "We are supply the speed and battery display for electric vehicles in different voltage 36V, 48V, 60V, 72V",
     "minimumOrder": 5,
     "availableQuantity": 25,
-    "price": 10000
+    "price": 10000,
+    "featured":true
   },
   {
-    "_id": 2,
+    
     "name": "MY1020Z 600 Watt (DC Geared Motor)",
     "img": "https://i.ibb.co/MMPP7my/MY1020-Z-600-Watt-DC-Geared-Motor-For-E-Bike.jpg",
     "description": "36 volt 600 watt MY1020Z gear reduction electric motor with mounting bracket and a 10 tooth #40 chain sprocket",
     "minimumOrder": 5,
     "availableQuantity": 20,
-    "price": 15000
+    "price": 15000,
+    "featured":true
   },
   {
-    "_id": 3,
+    
     "name": "Yalu 24V 350W E Bike Controller",
     "img": "https://i.ibb.co/XZzK1nx/Yalu-24-V-350-W-Aluminium-E-Bike-Controller.jpg",
     "description": "Compatible Motor: Hub Motor .Body Material AluminiumRated .Voltage: 24 V .Rated Power: 350 W",
     "minimumOrder": 10,
     "availableQuantity": 59,
-    "price": 4000
+    "price": 4000,
+    "featured":true
   },
   {
-    "_id": 4,
+    
     "name": "Front Fork For Electric Vehicles",
     "img": "https://i.ibb.co/tHr8qF8/Front-Fork-Suspension-Assembly-For-Tvs-Jupiter-Disc-Brake.jpg",
     "description": "We deal in Electric Bike Parts/ E Bike Parts, Electric Scooter Parts / E Scooter Parts, E Rickshaw Spare Parts, E Loader Spare Parts,",
     "minimumOrder": 10,
     "availableQuantity": 75,
-    "price": 3500
+    "price": 3500,
+    "featured":true
   },
   {
-    "_id": 5,
+    
     "name": "Two Wheeler Motorcycle Chain",
     "img": "https://i.ibb.co/c1G0FXm/Two-Wheeler-Mild-Steel-Motorcycle-Chain.jpg",
     "description": "Vehicle Type: Two Wheeler.Packaging Type: Box. Brand: Pace Technologies. Two Wheeler Parts - Bike Spare Parts.",
     "minimumOrder": 20,
     "availableQuantity": 120,
-    "price": 500
+    "price": 500,
+    "featured":true
   },
   {
-    "_id": 6,
+    
     "name": "Automotive Wire Harness",
     "img": "https://i.ibb.co/Pj6FzbQ/Automotive-Wire-Harness.jpg",
     "description": "Keeping the diverse requirements of customers in mind, we are instrumental in providing Automotive Wire Harness.",
     "minimumOrder": 20,
     "availableQuantity": 125,
-    "price": 100
+    "price": 100,
+    "featured":true
+  },
+  {
+    
+    "name": "Mikcarb Aluminium Motorcycle Carburetor",
+    "img": "https://i.ibb.co/Rh0Lj5v/carburetor-500x500.jpg",
+    "description": "Dimension: 8x6 inch, Vehicle: Splendor, Brand: Splendor, Material: Aluminium, Color: Silver",
+    "minimumOrder": 10,
+    "availableQuantity": 55,
+    "price": 600,
+    "featured":true
+  },
+  {
+    
+    "name": "Splendor Motorcycle Carburetor",
+    "img": "https://i.ibb.co/B6v8d8c/bike-engine-500x500.jpg",
+    "description": "Voltage: 240V, Vehicle: Splendor, Brand: Splendor, Material: Aluminium, Color: Silver",
+    "minimumOrder": 20,
+    "availableQuantity": 125,
+    "price": 25,
+    "featured":true
+  },
+  {
+    
+    "name": "Motorcycle Engines",
+    "img": "https://i.ibb.co/jJ7FTGp/motorcycle-engines-500x500.jpg",
+    "description": "Model: REV-60, Capacity: 800cc, Brand: Splendor, Material: Aluminium, Color: Black",
+    "minimumOrder": 1,
+    "availableQuantity": 3,
+    "price": 180000,
+    "featured":true
+  },
+  {
+    
+    "name": "Benelli Tnt 600i Bike Engine",
+    "img": "https://i.ibb.co/bK47mXB/benelli-tnt-600i-bike-engine-500x500.jpg",
+    "description": "Voltage: 240V, Vehicle: Splendor, Brand: Splendor, Material: Aluminium, Color: Silver",
+    "minimumOrder": 1,
+    "availableQuantity": 3,
+    "price": 50000,
+    "featured":true
+  },
+  {
+    
+    "name": "Polyerubb Rubber Engine Mountings",
+    "img": "https://i.ibb.co/h98fYqX/rubber-engine-mountings-500x500.jpg",
+    "description": "Application: Industrial, Hardness: 50-60 HRC, Brand: Polymer, Material: Silicon, Color: Silver",
+    "minimumOrder": 5,
+    "availableQuantity": 17,
+    "price": 900,
+    "featured":true
+  },
+  {
+    
+    "name": "Two Wheeler Clutch And Brake Yokes",
+    "img": "https://i.ibb.co/HD9wdrz/clutch-and-brake-yokes-500x500.jpg",
+    "description": "Application: Industrial, Origin: India, Brand: SRL, Material: Aluminium, Color: Black",
+    "minimumOrder": 15,
+    "availableQuantity": 117,
+    "price": 27,
+    "featured":true
+  },
+  {
+    
+    "name": "Steel Automobile Engine Valves",
+    "img": "https://i.ibb.co/4PWZ64J/automotive-engine-valve-500x500.jpg",
+    "description": "Application: Automotive Engine, Grade: EN-52, Brand: Diesel Power, Material: Steel, Color: Gold",
+    "minimumOrder": 10,
+    "availableQuantity": 23,
+    "price": 90,
+    "featured":true
+  },
+  {
+    
+    "name": "Stephanie Cable",
+    "img": "https://i.ibb.co/HT4Lb6q/stephanie-cable-500x500.jpg",
+    "description": "Application: Automotive Engine, Grade: EN-52, Brand: Diesel Power, Material: Steel, Color: Gold",
+    "minimumOrder": 10,
+    "availableQuantity": 23,
+    "price": 90,
+    "featured":true
+  },
+  {
+    
+    "name": "Mikcarb Aluminium Motorcycle Carburetor",
+    "img": "https://i.ibb.co/D9GvxXk/carburator-500x500.jpg",
+    "description": "Vehicle Type: Two Wheeler, Packaging Type: Box. Brand: Mikcarb Technologies. Two Wheeler Parts - Bike Spare Parts.",
+    "minimumOrder": 10,
+    "availableQuantity": 23,
+    "price": 600,
+    "featured":true
   }
+
 ]

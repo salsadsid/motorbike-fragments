@@ -25,19 +25,25 @@ const Banner = () => {
     ]
 
     const [currentIndex,setCurrentIndex] =useState(0)
-
+    
     const prevSlide=()=>{
         const isFirstSlide= currentIndex===0
         const newIndex= isFirstSlide ? slides.length-1 : currentIndex-1 
         setCurrentIndex(newIndex)
+        clearInterval(slideInterval)
     }
+    const slideInterval = setInterval(prevSlide,20000)
     const nxtSlide=()=>{
         const isLastSlide= currentIndex===slides.length-1
         const newIndex= isLastSlide ? 0 : currentIndex+1 
         setCurrentIndex(newIndex)
+        clearInterval(slideInterval)
     }
     const goToSlide = (slideIndex)=>{
         setCurrentIndex(slideIndex)
+    }
+    if(currentIndex===slides.length-1){
+        clearInterval(slideInterval)
     }
     return  (
         // <div className="hero min-h-screen" style={{ backgroundImage: `url(${img}` }}>
@@ -55,12 +61,12 @@ const Banner = () => {
             className="w-full h-full  bg-center bg-cover duration-500"
             >
             </div>
-            <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-8 rounded-full bg-black/20 text-white cursor-pointer p-1'>
-            <BsChevronCompactLeft onClick={prevSlide} size={30}/>
+            <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-8 rounded-full bg-black/20 text-white cursor-pointer p-1'onClick={prevSlide}>
+            <BsChevronCompactLeft  size={30}/>
             
             </div>
-            <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-8 rounded-full bg-black/20 text-white cursor-pointer p-1'>
-            <BsChevronCompactRight onClick={nxtSlide} size={30}/>
+            <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-8 rounded-full bg-black/20 text-white cursor-pointer p-1' onClick={nxtSlide}>
+            <BsChevronCompactRight  size={30}/>
 
             </div>
             <div className='absolute top-[50%] -translate-x-0 sm:block hidden'>
