@@ -18,15 +18,14 @@ const MakeAdmin = () => {
     }
     return (
         <div>
-            <h2 className='text-2xl'>All Users</h2>
+            <h2 style={{fontFamily:"fantasy"}} className='text-2xl text-center text-secondary my-3 border-b'>All Users</h2>
             <div className="overflow-x-auto">
-                <table className="table table-zebra w-full">
+                <table className="table table-compact w-full">
                     <thead>
                         <tr>
                             <th></th>
                             <th>User</th>
                             <th>Action</th>
-
                         </tr>
                     </thead>
                     <tbody>

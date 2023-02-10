@@ -37,6 +37,7 @@ const Purchase = () => {
                 console.log(data)
                 if (data.success) {
                     toast.success('Your Order Placed')
+                    navigate('/dashboard/order')
                 }
                 else {
                     toast.error('Order Already placed')
@@ -134,24 +135,27 @@ const Purchase = () => {
             		<div class="col-span-2 p-5">
             			<h1 class="text-xl font-medium ">Shopping Cart</h1>
             			<div class="sm:flex flex-col justify-between items-center mt-6 pt-6">
-            				<div class="sm:flex flex-col justify-center items-center">
-            					<img src={part.img} width="200" class="rounded-full "/>
+            				<div class="flex-col justify-center items-center">
+            					<div className='flex justify-center'>
+                                <img src={part.img} width="200" class="rounded-full" alt=''/>
+                                </div>
             					<div class="flex flex-col justify-center items-center ml-3 my-4">
             						<span class="md:text-xl font-bold">{part.name}</span>
             						<span class="text-sm font-light text-gray-600">Details: {part.description}</span>
                                     <span class="md:text-sm font-sm">Minimun Order: {part.minimumOrder}</span>		
-                                    <span class="md:text-sm font-sm">Available Quantity: {part.availableQuantity}</span>		
+                                    <span class="md:text-sm font-sm">Available Quantity: {part.availableQuantity}</span>
+                                    <span class="text-lg font-bold">Price: {part.price} টাকা </span>	
             					</div>		
             				</div>
-            				<div class="flex justify-center items-center">  					
+            				{/* <div class="flex justify-center items-center">  					
             					
             					<div className='flex items-center'>					
-            						<span class="text-lg font-bold">Price: {part.price} টাকা </span>
+            						
             					</div>
             					<div>
             						<i class="fa fa-close text-xs font-medium"></i>
             					</div>
-            				</div> 				
+            				</div> 				 */}
             			</div>
             			
             			
@@ -207,9 +211,9 @@ const Purchase = () => {
             				</div>
             			</div> */}
   			{/* <button class="h-12 w-full bg-blue-500 rounded focus:outline-none text-white hover:bg-blue-600">Check Out</button> */}
-              <h2 className="text-2xl text-gray-200 font-bold border-b my-2">Order Details</h2>
-                        <p className='text-gray-200'><span className='text-xl text-gray-200'>Email: </span>{user?.email}</p>
-                     <p className='text-gray-200 mb-2'><span className='text-xl text-gray-200'>Name: </span>{user?.displayName}</p>
+              <h2 className="text-xl font-medium  text-gray-200  border-b my-2">Order Details</h2>
+                        <p className='text-gray-200'><span className='text-lg text-gray-200'>Email: </span>{user?.email}</p>
+                     <p className='text-gray-200 mb-2'><span className='text-lg text-gray-200'>Name: </span>{user?.displayName}</p>
                      
               <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-control w-full max-w-xs mt-4">

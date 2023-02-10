@@ -34,16 +34,16 @@ const AllOrderRow = ({ order, index, number, setDeleteOrder, refetch }) => {
             <td>{order.productName}</td>
             <td>{order.email}</td>
 
-            <td>{!order.paid && <span className='bg-accent font-bold text-white px-1'>UNPAID</span>}
-                {order.paid && <span className='bg-green-600 font-bold text-white px-1'>
+            <td>{!order.paid && <span className='font-bold text-white p-1 bg-red-400 rounded'>UNPAID</span>}
+                {order.paid && <span className='bg-indigo-400 font-bold text-white p-1 rounded'>
                     PAID</span>}
             </td>
-            <td>{!order.status && <span className='bg-accent font-bold text-white px-1'>PENDING</span>}
-                {order.status && <span className='bg-green-600 font-bold text-white px-1'>
-                    SHIPPED</span>}
+            <td>{!order.status && <span className='bg-accent font-bold text-white p-1 rounded'>PENDING</span>}
+                {order.status && <span className='bg-green-400 font-bold text-white p-1 rounded'>
+                    SHIPPING</span>}
             </td>
-            <td>{order.tnxId ? <button onClick={() => handleStatus(order.tnxId)} className='btn btn-xs btn-secondary'>Approve Order</button> : <span className='bg-accent font-bold text-white px-1'>PLEASE PAY</span>}</td>
-            <td><label onClick={() => setDeleteOrder(order)} htmlFor="delete-order-modal" className="btn modal-button btn-xs btn-error">DELETE</label>
+            <td>{order.tnxId ? <button onClick={() => handleStatus(order.tnxId)} className='btn btn-xs btn-accent' disabled={order.status}>Approve Order</button> : <span className='bg-teal-500 rounded font-bold text-white p-1'>NOT PAID</span>}</td>
+            <td><label onClick={() => setDeleteOrder(order)} htmlFor="delete-order-modal" className="btn text-white modal-button btn-xs btn-warning">DELETE</label>
             </td>
         </tr >
     );

@@ -8,25 +8,23 @@ const Dashboard = () => {
     const [user, loading] = useAuthState(auth)
     const [admin] = useAdmin(user)
     return (
-        <div className="drawer drawer-mobile">
+        <div className="drawer drawer-mobile p-2">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content">
-                <h2 className='text-3xl text-secondary font-bold'>Dashboard</h2>
+            <div className="drawer-content my-4 mx-4">
+                <h2 style={{fontFamily:"fantasy"}} className='text-4xl text-center text-secondary'>DASHBOARD</h2>
                 <Outlet></Outlet>
 
 
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+                <ul className="menu bg-slate-300 rounded p-4 overflow-y-auto w-80 text-base-content">
 
                     <li><Link to='/dashboard'>My Profile</Link></li>
                     {admin ?
                         <>
                             <li><Link to='/dashboard/manageorder'>Manage All Orders</Link></li>
                             <li><Link to='/dashboard/addproduct'>Add a Product</Link></li>
-                            <li><Link to='/dashboard/upcomingproduct'>Add a Upcoming Product</Link></li>
-                            <li><Link to='/dashboard/manageproduct'>Manage All Products</Link></li>
                             <li><Link to='/dashboard/manageproduct'>Manage All Products</Link></li>
                             <li><Link to='/dashboard/makeadmin'>Make Admin</Link></li>
                         </> :

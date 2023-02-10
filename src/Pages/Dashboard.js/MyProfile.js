@@ -23,23 +23,23 @@ const MyProfile = () => {
             .then(data => {
                 console.log(data)
                 if (data.success) {
-                    toast.success('Your Profile Updated')
+                    toast.success('Profile Updated')
                 }
                 else {
-                    toast.error('Order Already placed')
+                    toast.error('Error Occurred')
                 }
             })
     }
     return (
-        <div className="card w-80 shadow-xl mx-auto bg-primary">
-            <div className="card-body items-center text-center">
-                <h2 className="card-title">Update Profile</h2>
+        <div className="max-w-full mx-auto md:py-10 px-6">
+            <div className="max-w-sm mx-auto px-6">
+                <h2 style={{fontFamily:"fantasy"}} className='text-2xl text-center text-secondary my-3 border-b'>Update Profile</h2>
                 <p><span>Email: </span>{user?.email}</p>
                 <p><span>Name: </span>{user?.displayName}</p>
 
 
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-control w-full max-w-sm">
+                    <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text">Phone</span>
                         </label>
@@ -48,7 +48,7 @@ const MyProfile = () => {
                                 value: true,
                                 message: 'Phone number is required'
                             }
-                        })} type="number" placeholder="Phone Number" className="input input-bordered w-full max-w-sm" />
+                        })} type="number" placeholder="e.g. +851541154" className="input input-bordered" />
                         <label className="label">
                             {errors.phone?.type === 'required' && <span className="label-text-alt text-red-600">{errors.phone.message}</span>}
 
@@ -56,14 +56,14 @@ const MyProfile = () => {
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Education</span>
+                            <span className="label-text">Highest Qualification</span>
                         </label>
                         <input {...register("education", {
                             required: {
                                 value: true,
                                 message: 'Education is required'
                             }
-                        })} type="text" placeholder="Education" className="input input-bordered w-full max-w-xs" />
+                        })} type="text" placeholder="e.g. HSC,BSC" className="input input-bordered" />
                         <label className="label">
                             {errors.education?.type === 'required' && <span className="label-text-alt text-red-600">{errors.education.message}</span>}
 
@@ -78,7 +78,7 @@ const MyProfile = () => {
                                 value: true,
                                 message: 'Location is required'
                             }
-                        })} type="text" placeholder="location" className="input input-bordered w-full max-w-xs" />
+                        })} type="text" placeholder="e.g. Dhaka, Bangladesh" className="input input-bordered w-full max-w-xs" />
                         <label className="label">
                             {errors.location?.type === 'required' && <span className="label-text-alt text-red-600">{errors.address.location}</span>}
 
@@ -86,14 +86,14 @@ const MyProfile = () => {
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">LinkedIn Profile</span>
+                            <span className="label-text">LinkedIn Profile URL</span>
                         </label>
                         <input {...register("linkedin", {
                             required: {
                                 value: true,
                                 message: 'linkedin url is required'
                             }
-                        })} type="text" placeholder="linkedin" className="input input-bordered w-full max-w-xs" />
+                        })} type="text" placeholder="e.g. linkedin.com/in/***" className="input input-bordered w-full max-w-xs" />
                         <label className="label">
                             {errors.linkedin?.type === 'required' && <span className="label-text-alt text-red-600">{errors.address.linkedin}</span>}
 

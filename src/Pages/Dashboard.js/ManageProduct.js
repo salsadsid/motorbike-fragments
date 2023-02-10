@@ -16,13 +16,14 @@ const ManageProduct = () => {
     }
     return (
         <div>
-            <h2>All Products</h2>
+            <h2 style={{fontFamily:"fantasy"}} className='text-2xl text-center text-secondary my-3 border-b'>All Products</h2>
             <div className="overflow-x-auto">
-                <table className="table table-zebra w-full">
+                <table className="table table-compact w-full">
                     <thead>
                         <tr>
                             <th></th>
                             <th>Product Name</th>
+                            <th>Available Quantity</th>
                             <th>Action</th>
                         </tr>
                     </thead>

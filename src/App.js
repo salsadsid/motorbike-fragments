@@ -20,7 +20,6 @@ import Payment from './Pages/Dashboard.js/Payment';
 import NotFound from './Pages/Shared/NotFound';
 import Blogs from './Pages/Blogs/Blogs';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
-import AddUpcomingProduct from './Pages/Dashboard.js/AddUpcomingProduct';
 import Announcement from './Pages/Home/Announcement';
 
 function App() {
@@ -48,7 +47,6 @@ function App() {
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='manageorder' element={<RequireAdmin><ManageOrder></ManageOrder></RequireAdmin>}></Route>
           <Route path='addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
-          <Route path='upcomingproduct' element={<RequireAdmin><AddUpcomingProduct></AddUpcomingProduct></RequireAdmin>}></Route>
           <Route path='manageproduct' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
           <Route path='makeadmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
         </Route>

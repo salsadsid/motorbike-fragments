@@ -1,5 +1,6 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading';
 
 const CheckoutForm = ({ order }) => {
@@ -10,7 +11,7 @@ const CheckoutForm = ({ order }) => {
     const [processing, setProcessing] = useState(false)
     const [tnxId, setTnxId] = useState("")
     const [clientSecret, setClientSecret] = useState('');
-
+    const navigate=useNavigate()
     const { _id, price, productName, email } = order;
 
     useEffect(() => {
@@ -69,7 +70,7 @@ const CheckoutForm = ({ order }) => {
             setCardError('')
             setTnxId(paymentIntent.id)
             console.log(paymentIntent)
-            setSuccess('Congratulation')
+            setSuccess('Congratulations')
             const payment = {
                 orderId: _id,
                 tnxId: paymentIntent.id,
@@ -115,10 +116,13 @@ const CheckoutForm = ({ order }) => {
                 </button>
             </form>
             {
-                cardError && <p className='bg-primary text-white px-1'>{cardError}</p>
+                cardError && <p className='bg-red-300 rounded p-1'>{cardError}</p>
             }
             {
-                success && <p className='bg-secondary text-white px-1'>{success}<span> {tnxId}</span> </p>
+                success && <p className='bg-slate-300 rounded p-1 '>{success}<span> {tnxId}</span> </p>
+            }
+            {
+                success && <button className='btn btn-accent btn-sm' onClick={()=>navigate('/dashboard/order')}>My Orders</button>
             }
         </>
     );

@@ -47,13 +47,12 @@ const AddProduct = () => {
             })
     };
     return (
-        <div>
-            <h2 className=''>Add a Product</h2>
+        <div className='max-w-full mx-auto md:py-10 px-6'>
+            <div className='max-w-sm mx-auto px-6'>
+            <h2 style={{fontFamily:"fantasy"}} className='text-2xl text-center text-secondary my-3 border-b'>Add a Product</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text">Product Name</span>
-                    </label>
+                   
                     <input {...register("name", {
                         required: {
                             value: true,
@@ -66,24 +65,20 @@ const AddProduct = () => {
                     </label>
                 </div>
                 <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text">Description</span>
-                    </label>
-                    <input {...register("description", {
+                    
+                    <textarea {...register("description", {
                         required: {
                             value: true,
                             message: 'Description is required'
                         }
-                    })} type="text" placeholder="description" className="input input-bordered w-full max-w-xs" />
+                    })} type="text" placeholder="Description" className="input input-lg textarea-ghost input-bordered w-full max-w-xs text-sm" />
                     <label className="label">
                         {errors.description?.type === 'required' && <span className="label-text-alt text-red-600">{errors.name.message}</span>}
 
                     </label>
                 </div>
                 <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text">Minimum Order</span>
-                    </label>
+                    
                     <input {...register("minimumOrder", {
                         required: {
                             value: true,
@@ -101,9 +96,7 @@ const AddProduct = () => {
                     </label>
                 </div>
                 <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text">Available Quantity</span>
-                    </label>
+                   
                     <input {...register("availableQuantity", {
                         required: {
                             value: true,
@@ -121,9 +114,7 @@ const AddProduct = () => {
                     </label>
                 </div>
                 <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text">Price</span>
-                    </label>
+                    
                     <input {...register("price", {
                         required: {
                             value: true,
@@ -142,9 +133,7 @@ const AddProduct = () => {
                 </div>
 
                 <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text">Photo</span>
-                    </label>
+                    
                     <input {...register("img", {
                         required: {
                             value: true,
@@ -158,6 +147,7 @@ const AddProduct = () => {
                 </div>
                 <input type="submit" className='btn btn-accent w-full max-w-xs' value='ADD PRODUCT' />
             </form>
+            </div>
         </div>
     );
 };

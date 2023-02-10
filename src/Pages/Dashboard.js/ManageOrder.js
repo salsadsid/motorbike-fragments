@@ -29,13 +29,17 @@ const ManageOrder = () => {
     console.log(orders)
     return (
         <div>
-            <h2>All Orders</h2>
+            <h2 style={{fontFamily:"fantasy"}} className='text-2xl my-2 border-b text-center text-secondary'>All Orders</h2>
             <div className="overflow-x-auto">
-                <table className="table table-zebra w-full">
+                <table className="table table-compact w-full">
                     <thead>
                         <tr>
                             <th></th>
                             <th>Product Name</th>
+                            <th>Email</th>
+                            <th>Payment Status</th>
+                            <th>State</th>
+                            <th>Approve Action</th>
                             <th>Action</th>
                         </tr>
                     </thead>

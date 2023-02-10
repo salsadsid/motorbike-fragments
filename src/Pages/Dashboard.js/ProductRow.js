@@ -1,12 +1,13 @@
 import React from 'react';
 
 const ProductRow = ({ product, setDeleteProduct, index }) => {
-    console.log(product)
+    const{name,availableQuantity}=product
     return (
         <tr>
             <th>{index + 1}</th>
-            <td>{product?.name}</td>
-            <td><label onClick={() => setDeleteProduct(product)} htmlFor="delete-product-modal" className="btn modal-button btn-xs btn-error">DELETE</label>
+            <td>{name}</td>
+            <td>{availableQuantity}</td>
+            <td><label onClick={() => setDeleteProduct(product)} htmlFor="delete-product-modal" className="btn modal-button btn-xs btn-warning text-white">DELETE</label>
             </td>
         </tr>
     );

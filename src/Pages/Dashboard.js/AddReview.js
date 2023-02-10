@@ -13,6 +13,7 @@ const AddReview = () => {
     }
     const onSubmit = data => {
         data.email = user?.email
+        data.name= user?.name ? user?.name : "Camilia"
         fetch('https://motorbike-fragments.onrender.com/review', {
             method: 'POST',
             headers: {
@@ -33,9 +34,10 @@ const AddReview = () => {
             })
     }
     return (
-        <div>
+        <div className='max-w-full mx-auto md:py-10 px-6'>
+            <div className='max-w-sm mx-auto px-6'>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <h2 className='text-2xl'>Please give us a review</h2>
+                <h2 style={{fontFamily:"fantasy"}} className='text-2xl text-center text-secondary my-3 border-b'>Please give us a review</h2>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Review</span>
@@ -77,6 +79,7 @@ const AddReview = () => {
                 </div>
                 <input type="submit" className='btn btn-accent  w-full max-w-xs' value='Add Review' />
             </form>
+            </div>
         </div>
     );
 };

@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 
 const DeleteOrderModal = ({ deleteOrder, setDeleteOrder, refetch }) => {
     const { productName, email, _id } = deleteOrder
-    console.log(_id);
+    console.log(deleteOrder);
     const handleDelete = () => {
         fetch(`https://motorbike-fragments.onrender.com/booking/${_id}`, {
             method: 'DELETE',
@@ -27,11 +27,12 @@ const DeleteOrderModal = ({ deleteOrder, setDeleteOrder, refetch }) => {
             <input type="checkbox" id="delete-order-modal" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
-                    <h3 className="font-bold text-lg">{deleteOrder.productName}</h3>
-                    <p className="py-4">Are You Sure?</p>
+                    <h3 className="font-bold text-lg">Confirm delete ?</h3>
+                    <p className="mt-2">Order placed by: {email}</p>
+                    <p className="">Item: {productName}</p>
                     <div className="modal-action">
-                        <button onClick={() => handleDelete(email)} className='btn btn-xs bg-red-500'>REMOVE</button>
-                        <label htmlFor="delete-order-modal" className="btn btn-xs">cancel</label>
+                        <button onClick={() => handleDelete(email)} className='btn btn-xs btn-primary'>REMOVE</button>
+                        <label htmlFor="delete-order-modal" className="btn btn-xs btn-accent">cancel</label>
                     </div>
                 </div>
             </div>

@@ -35,13 +35,14 @@ const MyOrder = () => {
         <div>
             <h2 className='text-2xl'>My Orders</h2>
             <div className="overflow-x-auto">
-                <table className="table table-zebra w-full">
+                <table className="table table-compact w-full">
                     <thead>
                         <tr>
                             <th></th>
                             <th>Product Name</th>
                             <th>Quantity</th>
                             <th>Payment Status</th>
+                            <th>TnxID</th>
                             <th>Action</th>
                         </tr>
                     </thead>
