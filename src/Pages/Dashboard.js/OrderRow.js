@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const OrderRow = ({ order, index, number, setDeleteOrder }) => {
+  // console
+  const navigate=useNavigate()
   return (
     <tr>
       <th>{index + 1}</th>
@@ -48,13 +50,22 @@ const OrderRow = ({ order, index, number, setDeleteOrder }) => {
         )}
       </td>
       <td>
-        <label
-          onClick={() => setDeleteOrder(order)}
-          htmlFor="delete-order-modal"
-          className="btn modal-button btn-xs btn-warning text-white"
+        {order.price && order.paid ? <label
+          onClick={() => navigate('/dashboard/review')}
+          htmlFor=""
+          className="btn btn-xs btn-primary text-secondary"
         >
-          DELETE
+          Add A Review
         </label>
+        :
+        <label
+        onClick={() => setDeleteOrder(order)}
+        htmlFor="delete-order-modal"
+        className="btn modal-button btn-xs btn-warning text-white"
+      >
+        DELETE
+      </label>
+        }
       </td>
     </tr>
   );

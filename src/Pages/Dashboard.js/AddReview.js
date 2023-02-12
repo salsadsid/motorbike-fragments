@@ -15,9 +15,10 @@ const AddReview = () => {
   if (loading) {
     return <Loading></Loading>;
   }
+  console.log(user.displayName)
   const onSubmit = (data) => {
     data.email = user?.email;
-    data.name = user?.name ? user?.name : "Camilia";
+    data.name = user?.displayName ? user?.displayName : "Camilia";
     fetch("https://motorbike-fragments.onrender.com/review", {
       method: "POST",
       headers: {

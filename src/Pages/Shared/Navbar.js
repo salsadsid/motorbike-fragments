@@ -1,22 +1,24 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "./Loading";
 import img from "../../assets/image/logo-removebg-preview.png";
 const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
+  const navigate=useNavigate()
   const logout = () => {
     signOut(auth);
   };
   if (loading) {
     return <Loading></Loading>;
   }
+
   const menuItem = (
     <>
-      <li className="active:bg-slate-400">
-      <NavLink to="/">
+      <li>
+      <NavLink to="/"  className="rounded">
             {({ isActive }) => (
               <span
                 className={
@@ -28,8 +30,8 @@ const Navbar = () => {
             )}
           </NavLink>
       </li>
-      <li>
-        <NavLink to="/blogs">
+      <li className="rounded">
+        <NavLink to="/blogs" className="rounded">
             {({ isActive }) => (
               <span
                 className={
@@ -42,7 +44,7 @@ const Navbar = () => {
           </NavLink>
       </li>
       <li>
-        <NavLink to="/portfolio">
+        <NavLink to="/portfolio" className="rounded">
             {({ isActive }) => (
               <span
                 className={
@@ -56,7 +58,7 @@ const Navbar = () => {
       </li>
       {user && (
         <li>
-          <NavLink to="/dashboard">
+          <NavLink to="/dashboard" className="rounded">
             {({ isActive }) => (
               <span
                 className={
@@ -71,7 +73,7 @@ const Navbar = () => {
       )}
       <li>
         {user ? (
-          <Link to="/" onClick={logout}>
+          <Link to="/" onClick={logout} className="rounded">
             Sign out
           </Link>
   
@@ -114,6 +116,7 @@ const Navbar = () => {
           <ul
             tabIndex="0"
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            style={{fontFamily:"'Gugi', monospace"}} 
           >
             {menuItem}
           </ul>
@@ -126,13 +129,14 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal p-0">{menuItem}</ul>
+        <ul style={{fontFamily:"'Roboto', monospace"}}  className="menu menu-horizontal p-0">{menuItem}</ul>
       </div>
       <div className="navbar-end">
-        <label
+       { user && <label
           tabIndex="0"
           htmlFor="my-drawer-2"
           className="btn btn-ghost lg:hidden"
+          onClick={()=>navigate('/dashboard')}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +152,7 @@ const Navbar = () => {
               d="M4 6h16M4 12h8m-8 6h16"
             />
           </svg>
-        </label>
+        </label>}
       </div>
     </div>
   );
