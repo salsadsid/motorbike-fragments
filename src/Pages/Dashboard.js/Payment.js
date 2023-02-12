@@ -63,7 +63,7 @@ const Payment = () => {
                     </span>
                   </p>
                   <p>
-                    Phone :{" "}
+                    Address :{" "}
                     <span className="text-md font-light text-gray-600">
                       {order?.address}
                     </span>
