@@ -7,8 +7,8 @@ const Banner3 = () => {
       <div class="p-8 md:p-12 lg:px-16 lg:py-24">
         <div class="mx-auto max-w-xl text-center sm:text-left">
           <h2
-            style={{ fontFamily: "fantasy" }}
-            className="text-4xl text-center text-secondary relative lg:text-left"
+            style={{ fontFamily: "'Gugi', monospace" }}
+            className="text-4xl font-extralight text-center text-secondary relative lg:text-left"
           >
             Expert Advice ?
           </h2>
@@ -22,8 +22,22 @@ const Banner3 = () => {
           </p>
 
           <div class="mt-4 md:mt-8">
-            <Link class="inline-block rounded bg-accent px-12 py-3 text-sm font-medium text-white transition hover:bg-yellow-500 focus:outline-none focus:ring focus:ring-yellow-300">
+            <Link class="inline-block rounded bg-accent px-12 py-3 text-sm font-medium text-secondary transition hover:bg-yellow-500 focus:outline-none focus:ring focus:ring-yellow-300">
               Explore More
+              <svg
+                 className="ml-3 h-5 w-5 inline"
+                 xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+               >
+                 <path
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   stroke-width="2"
+                   d="M17 8l4 4m0 0l-4 4m4-4H3"
+                 />
+               </svg>
             </Link>
           </div>
         </div>

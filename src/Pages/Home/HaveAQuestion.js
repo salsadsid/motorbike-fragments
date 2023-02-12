@@ -5,7 +5,7 @@ const Banner2 = () => {
       <div class="p-8 md:p-12 lg:px-16 lg:py-24">
         <div class="mx-auto max-w-lg text-center">
           <h2
-            style={{ fontFamily: "fantasy" }}
+            style={{ fontFamily: "'Gugi', monospace" }}
             className="text-4xl text-center text-secondary relative lg:text-left"
           >
             Have A Question ?

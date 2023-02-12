@@ -10,7 +10,28 @@ const OrderRow = ({ order, index, number, setDeleteOrder }) => {
       <td>
         {order.price && !order.paid && (
           <Link to={`/dashboard/payment/${order._id}`}>
-            <button className="btn btn-xs btn-accent">pay</button>
+            <button
+               
+               class="group flex w-full items-center justify-center rounded-md bg-accent px-3 py-1 text-secondary transition focus:outline-none focus:ring focus:ring-yellow-400 sm:w-auto"
+             >
+               <span class="text-sm font-medium"> Proceed to Pay </span>
+     
+               <svg
+                 class="ml-3 h-5 w-5 "
+                 xmlns="http://www.w3.org/2000/svg"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+               >
+                 <path
+                   stroke-linecap="round"
+                   stroke-linejoin="round"
+                   stroke-width="2"
+                   d="M17 8l4 4m0 0l-4 4m4-4H3"
+                 />
+               </svg>
+             </button>
+           
           </Link>
         )}
         {order.price && order.paid && (

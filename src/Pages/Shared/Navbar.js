@@ -1,11 +1,10 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import auth from "../../firebase.init";
-import ActiveLink from "./ActiveLink";
 import Loading from "./Loading";
-import img from "../../assets/image/logo.png";
+import img from "../../assets/image/logo-removebg-preview.png";
 const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
   const logout = () => {
@@ -16,27 +15,78 @@ const Navbar = () => {
   }
   const menuItem = (
     <>
-      <li>
-        <ActiveLink to="/">Home</ActiveLink>
+      <li className="active:bg-slate-400">
+      <NavLink to="/">
+            {({ isActive }) => (
+              <span
+                className={
+                  isActive ? undefined : undefined
+                }
+              >
+                Home
+              </span>
+            )}
+          </NavLink>
       </li>
       <li>
-        <ActiveLink to="/blogs">Blogs</ActiveLink>
+        <NavLink to="/blogs">
+            {({ isActive }) => (
+              <span
+                className={
+                  isActive ? undefined : undefined
+                }
+              >
+                Blogs
+              </span>
+            )}
+          </NavLink>
       </li>
       <li>
-        <ActiveLink to="/portfolio">Portfolio</ActiveLink>
+        <NavLink to="/portfolio">
+            {({ isActive }) => (
+              <span
+                className={
+                  isActive ? undefined : undefined
+                }
+              >
+                Portfolio
+              </span>
+            )}
+          </NavLink>
       </li>
       {user && (
         <li>
-          <ActiveLink to="/dashboard">Dashboard</ActiveLink>
+          <NavLink to="/dashboard">
+            {({ isActive }) => (
+              <span
+                className={
+                  isActive ? undefined : undefined
+                }
+              >
+                Dashboard
+              </span>
+            )}
+          </NavLink>
         </li>
       )}
       <li>
         {user ? (
-          <Link style={{ padding: "6px 8px" }} to="/" onClick={logout}>
+          <Link to="/" onClick={logout}>
             Sign out
           </Link>
+  
         ) : (
-          <ActiveLink to="/login">Login</ActiveLink>
+          <NavLink to="/login">
+            {({ isActive }) => (
+              <span
+                className={
+                  isActive ? undefined : undefined
+                }
+              >
+                Login
+              </span>
+            )}
+          </NavLink>
         )}
       </li>
     </>
@@ -72,7 +122,7 @@ const Navbar = () => {
           to="/"
           className="btn flex items-center justify-center btn-ghost normal-case text-xl"
         >
-          <img src={img} className="h-[30px] sm:h-[50px]"></img>
+          <img src={img} className="h-[30px] sm:h-[50px]" alt="logo-of-motorbike-fragments"></img>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

@@ -16,7 +16,7 @@ const Reviews = () => {
   return (
     <div className="sm:my-16 my-8 sm:mx-8 mx-2">
       <h2
-        style={{ fontFamily: "fantasy" }}
+        style={{ fontFamily: "'Gugi', monospace" }}
         className="text-4xl text-center text-secondary relative lg:text-left"
       >
         What our customer says?

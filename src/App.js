@@ -22,6 +22,7 @@ import Blogs from "./Pages/Blogs/Blogs";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 import Announcement from "./Pages/Home/Announcement";
 import AllProducts from "./Pages/AllProducts/AllProducts";
+import DashboardHome from "./Pages/Dashboard.js/DashboardHome";
 
 function App() {
   return (
@@ -54,10 +55,11 @@ function App() {
             </RequireAuth>
           }
         >
-          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route index element={<DashboardHome></DashboardHome>}></Route>
           <Route path="order" element={<MyOrder></MyOrder>}></Route>
           <Route path="payment/:id" element={<Payment></Payment>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
+          <Route path="profile" element={<MyProfile></MyProfile>}></Route>
           <Route
             path="manageorder"
             element={

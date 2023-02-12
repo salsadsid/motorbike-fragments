@@ -40,7 +40,8 @@ const MyOrder = () => {
 
   return (
     <div>
-      <h2 className="text-2xl">My Orders</h2>
+      <h2 style={{ fontFamily: "'Gugi', monospace" }}
+          className="text-xl text-center text-secondary my-3 border-b">My Orders</h2>
       <div className="overflow-x-auto">
         <table className="table table-compact w-full">
           <thead>

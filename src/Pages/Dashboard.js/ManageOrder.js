@@ -36,8 +36,8 @@ const ManageOrder = () => {
   return (
     <div>
       <h2
-        style={{ fontFamily: "fantasy" }}
-        className="text-2xl my-2 border-b text-center text-secondary"
+        style={{ fontFamily: "'Gugi', monospace" }}
+        className="text-xl my-2 border-b text-center text-secondary"
       >
         All Orders
       </h2>

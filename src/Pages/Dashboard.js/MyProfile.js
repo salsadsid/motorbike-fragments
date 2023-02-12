@@ -40,10 +40,10 @@ const MyProfile = () => {
     <div className="max-w-full mx-auto md:py-10 px-6">
       <div className="max-w-sm mx-auto px-6">
         <h2
-          style={{ fontFamily: "fantasy" }}
-          className="text-2xl text-center text-secondary my-3 border-b"
+          style={{ fontFamily: "'Gugi', monospace" }}
+          className="text-xl text-center text-secondary my-3 border-b"
         >
-          Update Profile
+          Personal Information
         </h2>
         <p>
           <span>Email: </span>
@@ -136,7 +136,7 @@ const MyProfile = () => {
                 },
               })}
               type="text"
-              placeholder="e.g. linkedin.com/in/***"
+              placeholder="e.g. linkedin.com/in/salsadsid"
               className="input input-bordered w-full max-w-xs"
             />
             <label className="label">

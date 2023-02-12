@@ -30,10 +30,10 @@ const Payment = () => {
     <div class="py-12">
       <div class="max-w-md mx-auto bg-gray-100 shadow-lg rounded-lg  md:max-w-5xl">
         <div class="md:flex ">
-          <div class="w-full p-4 px-5 py-5">
+          <div class="w-full p-4 sm:px-5 px-1 py-5">
             <h2
-              style={{ fontFamily: "fantasy" }}
-              className="text-2xl text-center text-secondary my-3 border-b"
+              style={{ fontFamily: "'Gugi', monospace" }}
+              className="text-xl text-center text-secondary my-3 border-b"
             >
               Payment
             </h2>

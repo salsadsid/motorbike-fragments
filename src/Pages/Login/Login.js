@@ -47,9 +47,11 @@ const Login = () => {
     <div className="flex h-screen justify-center items-center ">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
-          <h2 className="text-center text-secondary text-2xl font-bold">
-            Login
-          </h2>
+        <h2
+            style={{ fontFamily: "'Gugi', monospace" }}
+            className="text-3xl text-center text-secondary relative "
+          >
+            Login</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control w-full max-w-xs">
               <label className="label">

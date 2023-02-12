@@ -51,7 +51,7 @@ const AddProduct = () => {
     <div className="max-w-full mx-auto md:py-10 px-6">
       <div className="max-w-sm mx-auto px-6">
         <h2
-          style={{ fontFamily: "fantasy" }}
+          style={{ fontFamily: "'Gugi', monospace" }}
           className="text-2xl text-center text-secondary my-3 border-b"
         >
           Add a Product

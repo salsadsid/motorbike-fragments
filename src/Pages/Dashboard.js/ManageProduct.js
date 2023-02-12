@@ -21,8 +21,8 @@ const ManageProduct = () => {
   return (
     <div>
       <h2
-        style={{ fontFamily: "fantasy" }}
-        className="text-2xl text-center text-secondary my-3 border-b"
+        style={{ fontFamily: "'Gugi', monospace" }}
+        className="text-xl text-center text-secondary my-3 border-b"
       >
         All Products
       </h2>
