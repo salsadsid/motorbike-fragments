@@ -67,7 +67,7 @@ const CheckoutForm = ({ order }) => {
       setCardError("");
       setTnxId(paymentIntent.id);
       console.log(paymentIntent);
-      setSuccess("Congratulations");
+      setSuccess("Congratulations!!!");
       const payment = {
         orderId: _id,
         tnxId: paymentIntent.id,
@@ -118,8 +118,8 @@ const CheckoutForm = ({ order }) => {
       {cardError && <p className="bg-red-300 rounded p-1">{cardError}</p>}
       {success && (
         <p className="bg-slate-300 rounded p-1 ">
-          {success}
-          <span> {tnxId}</span>{" "}
+          {success} <br></br>
+          <span>TnxId: {tnxId}</span>{" "}
         </p>
       )}
       {success && (

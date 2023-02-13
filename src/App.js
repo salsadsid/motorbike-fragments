@@ -23,6 +23,7 @@ import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 import Announcement from "./Pages/Home/Announcement";
 import AllProducts from "./Pages/AllProducts/AllProducts";
 import DashboardHome from "./Pages/Dashboard.js/DashboardHome";
+import Questions from "./Pages/Dashboard.js/Questions";
 
 function App() {
   return (
@@ -81,6 +82,14 @@ function App() {
             element={
               <RequireAdmin>
                 <ManageProduct></ManageProduct>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="questions"
+            element={
+              <RequireAdmin>
+                <Questions></Questions>
               </RequireAdmin>
             }
           ></Route>

@@ -113,7 +113,7 @@ const AddReview = () => {
           </div>
           <input
             type="submit"
-            className="btn btn-accent  w-full max-w-xs"
+            className="btn btn-accent w-full max-w-xs"
             value="Add Review"
           />
         </form>

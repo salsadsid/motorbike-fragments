@@ -62,6 +62,15 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
+                <NavLink to="/dashboard/questions">
+                  {({ isActive }) => (
+                    <span className={isActive ? undefined : undefined}>
+                      Questions
+                    </span>
+                  )}
+                </NavLink>
+              </li>
+              <li>
                 <NavLink to="/dashboard/makeadmin">
                   {({ isActive }) => (
                     <span className={isActive ? undefined : undefined}>

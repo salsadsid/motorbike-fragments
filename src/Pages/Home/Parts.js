@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading';
@@ -13,7 +13,8 @@ const Parts = () => {
     }
     
     return (
-        <div className='sm:my-16 my-8 sm:mx-8 mx-2'>
+        <div className='sm:my-16 my-8 sm:mx-8 mx-2 relative'>
+          
             <h2 id="motorbike-parts" style={{fontFamily:"'Gugi', monospace"}} className='sm:text-4xl text-2xl text-center text-secondary relative lg:text-left'>Motorbike Spare Parts</h2>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 my-8'>
                 {
@@ -24,7 +25,7 @@ const Parts = () => {
                 }
             </div>
             <div className='flex justify-end'>
-            <button
+                <button
                onClick={()=>navigate('/allproducts')}
                class="group my-6 flex w-full items-center justify-center rounded-md bg-accent px-5 py-3 text-secondary transition focus:outline-none focus:ring focus:ring-yellow-400 sm:w-auto"
              >
