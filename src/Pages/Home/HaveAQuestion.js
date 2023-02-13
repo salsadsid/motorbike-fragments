@@ -36,12 +36,12 @@ const onSubmit=(data)=>{
         <div class="mx-auto max-w-lg text-center">
           <h2
             style={{ fontFamily: "'Gugi', monospace" }}
-            className="text-4xl text-center text-secondary relative lg:text-left"
+            className="sm:text-4xl text-2xl text-center text-secondary relative lg:text-left"
           >
             Have A Question ?
           </h2>
 
-          <p class="hidden text-gray-500 dark:text-gray-400 sm:mt-4 sm:block">
+          <p class=" text-gray-500 dark:text-gray-400 sm:mt-4">
             Have a question or concern about our products or services? We're
             here to help! Fill out the form below and a member of our team will
             get back to you as soon as possible.
@@ -101,7 +101,7 @@ const onSubmit=(data)=>{
 
             <button
               type="submit"
-              class="group my-6 flex w-full items-center justify-center rounded-md bg-accent px-5 py-3 text-secondary transition focus:outline-none focus:ring focus:ring-yellow-400 sm:w-auto"
+              class="flex justify-center rounded bg-accent px-12 py-3 text-sm font-medium text-secondary transition hover:bg-yellow-500 focus:outline-none focus:ring focus:ring-yellow-300"
             >
               <span class="text-sm font-medium"> Send </span>
 

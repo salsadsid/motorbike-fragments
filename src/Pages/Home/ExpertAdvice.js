@@ -8,12 +8,12 @@ const Banner3 = () => {
         <div class="mx-auto max-w-xl text-center sm:text-left">
           <h2
             style={{ fontFamily: "'Gugi', monospace" }}
-            className="text-4xl font-extralight text-center text-secondary relative lg:text-left"
+            className="sm:text-4xl text-2xl font-extralight text-center text-secondary relative lg:text-left"
           >
             Expert Advice ?
           </h2>
 
-          <p class="hidden text-gray-500 dark:text-gray-400 md:mt-4 md:block">
+          <p class=" text-gray-500 dark:text-gray-400 md:mt-4 ">
             Not sure what you need for your motorbike? Our team of experts is
             here to help! With years of experience in the industry, they know
             everything there is to know about motorbikes and their components.

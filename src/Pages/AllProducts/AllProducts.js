@@ -32,7 +32,7 @@ const AllProducts = () => {
       <div className="flex justify-end">
         <button
           onClick={() => navigate("/")}
-          class="group my-6 flex w-full items-center justify-center rounded-md bg-accent px-5 py-3 text-secondary transition focus:outline-none focus:ring focus:ring-yellow-400 sm:w-auto"
+          class="flex rounded bg-accent px-12 py-3 text-sm font-medium text-secondary transition hover:bg-yellow-500 focus:outline-none focus:ring focus:ring-yellow-300"
         >
           <span class="text-sm font-medium"> Back to home </span>
 

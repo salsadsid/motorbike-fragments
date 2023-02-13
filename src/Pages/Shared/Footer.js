@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer p-10 bg-base-200 text-base-content">
             <div>
 
-                <img className='h-[60px]' src={img}></img>
+                <img className='h-[30px] sm:h-[50px]' src={img} alt="logo"></img>
                 <p className='text-secondary'>MotorBike Fragments<br />A Motorbike Parts Manufacturing Company</p>
             </div>
             <div>
