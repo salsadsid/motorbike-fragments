@@ -42,6 +42,7 @@ async function run() {
         const reviewCollection = client.db('motorbike-fragments').collection("reviews")
         const paymentCollection = client.db('motorbike-fragments').collection("payments")
         const upcomingCollection = client.db('motorbike-fragments').collection("upcoming")
+        const questionCollection = client.db('motorbike-fragments').collection("question")
 
         //Verify Admin
         const verifyAdmin = async (req, res, next) => {
@@ -101,6 +102,7 @@ async function run() {
             const result = await reviewCollection.insertOne(review);
             res.send({ success: true, result });
         })
+
         //Purchase Api
         app.get('/purchase/:id', async (req, res) => {
             const id = req.params.id;
@@ -227,6 +229,18 @@ async function run() {
             const user = await userCollection.findOne({ email: email })
             const isAdmin = user.role === 'admin';
             res.send({ admin: isAdmin })
+        })
+
+        // Question API
+
+        app.post('/question',async(req,res)=>{
+            const question = req.body
+            const result = await questionCollection.insertOne({...question,d: new Date()});
+            res.send({ success: true, result });
+        })
+        app.get('/question', verifyJWT, verifyAdmin,async(req,res)=>{
+            const result = await questionCollection.find({}).toArray();
+            res.send({ success: true, result });    
         })
     }
     finally {
